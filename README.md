@@ -39,5 +39,26 @@ docs/            biblia-do-canal.md
 3. Registre a `<Composition>` em `src/Root.tsx` e adicione os scripts `render:ep02` e `thumb:ep02` no `package.json`.
 4. `npm run dev` para iterar, e depois `npm run render:ep02`.
 
-## Áudio
-Tudo em `public/audio` é **placeholder gerado por código** e fica fora do git. Para usar voz real, salve os arquivos com os mesmos nomes e rode `npm run audio -- --keep-existing`. Veja a seção de áudio em `src/episodes/ep01-cafe-segunda/METADATA.md`.
+## Vozes (ElevenLabs)
+As falas são geradas pela API da ElevenLabs com **tempo por caractere**, que alimenta o lip-sync e as legendas palavra a palavra.
+
+| Personagem | Voz | Estilo |
+|---|---|---|
+| Bolota | Callum | rouca, cansada e dramática |
+| Palito | Will | relaxada e otimista |
+| Máquina | Daniel | locutor formal e neutro |
+
+As vozes, o modelo e os ajustes (estabilidade, estilo, velocidade) ficam em `src/config/voices.json`.
+
+```bash
+ELEVENLABS_API_KEY=sk_... npm run voices                # gera só as falas novas ou alteradas (cache por hash)
+ELEVENLABS_API_KEY=sk_... npm run voices -- --only=ep01
+ELEVENLABS_API_KEY=sk_... npm run voices -- --force     # regenera tudo
+```
+
+- **Saída:** `public/voices/<ep>/<id>.mp3` mais `src/episodes/<pasta>/voices.json` (duração e alinhamento). Os dois vão para o git, para que o render não dependa da API.
+- **Ajustes:** se uma fala real ficar mais longa que o espaço até a próxima, o script avisa. Ajuste `start` no `dialogue.json`; as ações da cena se movem junto, porque os marcadores são derivados das falas.
+- **Pronúncia diferente da legenda:** use o campo `tts` no `dialogue.json` (ex.: legenda "UM café", fala "um café"). Precisa ter o mesmo número de palavras.
+- **Atrás de proxy (Node 22.21+):** acrescente `NODE_USE_ENV_PROXY=1` ao comando.
+
+Efeitos sonoros e trilha (`public/audio`) continuam sendo **placeholders gerados por código** e ficam fora do git. Uma fala sem voz gerada usa automaticamente o placeholder "blip".

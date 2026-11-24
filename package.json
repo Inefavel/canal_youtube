@@ -5,6 +5,7 @@
   "description": "Bolota & Palito — estúdio de desenho animado programático (Remotion) para YouTube Shorts",
   "scripts": {
     "audio": "node scripts/generate-placeholder-audio.mjs",
+    "voices": "node scripts/generate-voices.mjs",
     "dev": "npm run audio && remotion studio",
     "typecheck": "tsc --noEmit",
     "render:ep01": "npm run audio && remotion render Ep01CafeSegunda out/ep01-cafe-segunda.mp4",

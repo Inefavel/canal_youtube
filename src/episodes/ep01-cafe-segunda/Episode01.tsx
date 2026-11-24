@@ -1,50 +1,62 @@
-import React, {useMemo} from 'react';
+import React from 'react';
 import {AbsoluteFill, Easing, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {FONTS} from '../../config/tokens';
 import {Bolota, Palito} from '../../characters';
 import type {Expression} from '../../characters';
-import {COLORS} from '../../config/tokens';
+import {COLORS, FONTS, VIDEO} from '../../config/tokens';
 import {MOTION, sec} from '../../config/timing';
 import {Camera} from '../../components/Camera';
 import {Captions} from '../../components/Captions';
-import type {CaptionLine} from '../../components/Captions';
 import {EpisodeAudio} from '../../components/EpisodeAudio';
 import {kf, step} from '../../components/keyframes';
+import {buildTimeline} from '../../components/timeline';
+import type {Dialogue, VoicesFile} from '../../components/timeline';
 import {ImpactLines, IrisOut, TitleCard, Zzz} from '../../components/Transitions';
-import {cuesFromText, mouthAt} from '../../lipsync/cues';
-import type {MouthCue} from '../../lipsync/cues';
+import {mouthAt} from '../../lipsync/cues';
 import {Kitchen, KITCHEN} from '../../scenes/Kitchen';
 import {CoffeeMachine} from '../../props/CoffeeMachine';
 import {Cup} from '../../props/Cup';
 import {WallClock} from '../../props/WallClock';
-import dialogue from './dialogue.json';
+import dialogueJson from './dialogue.json';
+import voicesJson from './voices.json';
 
 /**
- * EP01 — "O Café da Segunda" (30 s, 9:16, 30 fps)
+ * EP01 — "O Café da Segunda" (31,5 s, 9:16, 30 fps)
  * Gancho (0–3 s): close no Bolota exausto pedindo café.
  * Desenvolvimento: máquina entra em atualização de 3 horas; Palito dá um conselho inútil; time-lapse.
  * Fechamento: a atualização termina e a máquina agora só serve chá de camomila.
  */
 
+const dialogue = dialogueJson as Dialogue;
+
+/**
+ * Linha do tempo calculada uma única vez (fora do render): junta roteiro + vozes reais.
+ * Os marcadores abaixo são derivados das falas; mudar um "start" no dialogue.json move a cena junto.
+ */
+export const TIMELINE = buildTimeline(dialogue, voicesJson as VoicesFile, VIDEO.fps);
+const {startOf, endOf} = TIMELINE;
+
 // ---------- marcadores de tempo (frames) ----------
 export const T = {
-  pressStart: sec(2.8),
-  pressHit: sec(3.2),
-  updateStart: sec(3.6),
-  shockStart: sec(6.3),
-  shockEnd: sec(7.6),
-  palitoEnter: sec(8.0),
-  titleCardStart: sec(14.5),
-  timelapseStart: sec(16.5),
-  updateDone: sec(21.0),
-  cupOut: sec(23.5),
-  twitchStart: sec(26.2),
-  irisStart: sec(28.8),
-  end: sec(dialogue.durationSeconds),
+  pressStart: startOf('l2') - sec(0.9),
+  pressHit: startOf('l2') - sec(0.5),
+  updateStart: startOf('l2') - sec(0.1),
+  shockStart: startOf('l3'),
+  shockEnd: endOf('l3') + sec(0.2),
+  palitoEnter: startOf('l4') - sec(0.6),
+  palitoWaveEnd: endOf('l4'),
+  annoyedStart: startOf('l5'),
+  progressBump: startOf('l5'),
+  titleCardStart: endOf('l5') + sec(0.3),
+  timelapseStart: endOf('l5') + sec(1.8),
+  updateDone: startOf('l6') - sec(0.3),
+  cupOut: startOf('l6') + sec(2.8),
+  twitchStart: startOf('l8') - sec(0.5),
+  irisStart: endOf('l8') + sec(0.1),
+  end: TIMELINE.durationInFrames,
 } as const;
 
 /** Frame sugerido para a thumbnail (Bolota em choque + tela "1%"). */
-export const EP01_THUMBNAIL_FRAME = sec(6.9);
+export const EP01_THUMBNAIL_FRAME = T.shockStart + sec(0.6);
 
 // ---------- layout (px no canvas 1080x1920) ----------
 const FLOOR = KITCHEN.floorY;
@@ -56,8 +68,6 @@ const BOLOTA_FACE = {x: BOLOTA_X, y: 1130};
 const SPEAKER_COLORS = {bolota: COLORS.bolotaTag, palito: COLORS.palitoTag, maquina: COLORS.machineScreen};
 const SPEAKER_NAMES = {bolota: 'BOLOTA', palito: 'PALITO', maquina: 'MÁQUINA'};
 
-type Speaker = keyof typeof SPEAKER_NAMES;
-
 type Episode01Props = {
   /** Modo thumbnail: congela no frame indicado, sem legenda/áudio e com texto grande. */
   thumbnail?: boolean;
@@ -68,29 +78,15 @@ export const Episode01: React.FC<Episode01Props> = ({thumbnail = false}) => {
   const frame = thumbnail ? EP01_THUMBNAIL_FRAME : currentFrame;
   const {fps} = useVideoConfig();
 
-  // Calculado UMA vez (não a cada frame): legendas e cues de lip-sync por personagem.
-  const {captions, cues} = useMemo(() => {
-    const caps: CaptionLine[] = dialogue.lines.map((l) => ({
-      id: l.id,
-      speaker: l.speaker,
-      text: l.text,
-      startFrame: sec(l.start),
-      endFrame: sec(l.end),
-    }));
-    const bySpeaker: Record<Speaker, MouthCue[]> = {bolota: [], palito: [], maquina: []};
-    for (const c of caps) {
-      bySpeaker[c.speaker as Speaker].push(...cuesFromText(c.text, c.startFrame, c.endFrame));
-    }
-    return {captions: caps, cues: bySpeaker};
-  }, []);
+  const cues = TIMELINE.cuesBySpeaker;
 
   // ---------- câmera ----------
   const zoom =
     frame < T.updateStart
-      ? kf(frame, [0, sec(2.4), T.updateStart], [1.75, 1.6, 1])
+      ? kf(frame, [0, T.pressStart - sec(0.4), T.updateStart], [1.75, 1.6, 1])
       : frame < T.palitoEnter
         ? kf(frame, [T.shockStart - 2, T.shockStart + 4, T.shockEnd, T.palitoEnter], [1, 1.45, 1.45, 1])
-        : kf(frame, [sec(25.8), T.irisStart], [1, 1.8], Easing.out(Easing.quad));
+        : kf(frame, [T.twitchStart - sec(0.3), T.irisStart], [1, 1.8], Easing.out(Easing.quad));
   const shake = frame >= T.shockStart && frame < T.shockEnd ? kf(frame, [T.shockStart, T.shockEnd], [16, 2]) : 0;
 
   // ---------- máquina ----------
@@ -98,7 +94,7 @@ export const Episode01: React.FC<Episode01Props> = ({thumbnail = false}) => {
     frame < T.updateStart || frame >= T.updateDone
       ? null
       : frame < T.timelapseStart
-        ? kf(frame, [sec(12), sec(13.5)], [0.01, 0.02])
+        ? kf(frame, [T.progressBump, T.progressBump + sec(1.5)], [0.01, 0.02])
         : kf(frame, [T.timelapseStart, T.updateDone - 6], [0.02, 0.99], Easing.inOut(Easing.quad));
   const screenLines =
     frame < T.updateStart
@@ -108,7 +104,7 @@ export const Episode01: React.FC<Episode01Props> = ({thumbnail = false}) => {
         : frame < T.cupOut
           ? ['CaféOS 2.0', 'BEM-VINDO!']
           : ['CHÁ DE', 'CAMOMILA'];
-  const machineSpeaking = mouthAt(cues.maquina, frame) !== null;
+  const machineSpeaking = mouthAt(cues.maquina ?? [], frame) !== null;
   const buttonPressed = kf(frame, [T.pressHit - 2, T.pressHit, T.pressHit + 6], [0, 1, 0]);
 
   // ---------- Bolota ----------
@@ -122,7 +118,7 @@ export const Episode01: React.FC<Episode01Props> = ({thumbnail = false}) => {
     [T.updateStart, 'neutral'],
     [T.shockStart, 'shocked'],
     [T.shockEnd, 'tired'],
-    [sec(11.8), 'annoyed'],
+    [T.annoyedStart, 'annoyed'],
     [T.timelapseStart, 'sleeping'],
     [T.updateDone, 'shocked'],
     [T.updateDone + 12, 'happy'],
@@ -133,7 +129,7 @@ export const Episode01: React.FC<Episode01Props> = ({thumbnail = false}) => {
     [0, 0],
     [T.pressStart, 0.7],
     [T.shockStart, 0],
-    [sec(9.0), -0.8],
+    [T.palitoEnter + sec(0.6), -0.8],
     [T.timelapseStart, 0],
     [T.updateDone, 0.7],
     [T.twitchStart, 0],
@@ -153,7 +149,7 @@ export const Episode01: React.FC<Episode01Props> = ({thumbnail = false}) => {
     [T.updateDone, 'shocked'],
     [T.updateDone + 12, 'happy'],
   ]);
-  const palitoWave = frame >= sec(9) && frame < sec(11.5) ? 150 + 20 * Math.sin(frame / 3) : 20;
+  const palitoWave = frame >= startOf('l4') && frame < T.palitoWaveEnd ? 150 + 20 * Math.sin(frame / 3) : 20;
 
   // ---------- time-lapse ----------
   const clockHours = kf(frame, [T.titleCardStart, T.updateDone], [0, 3], Easing.inOut(Easing.quad));
@@ -181,7 +177,7 @@ export const Episode01: React.FC<Episode01Props> = ({thumbnail = false}) => {
           x={palitoX}
           y={FLOOR}
           expression={palitoExpression}
-          mouth={mouthAt(cues.palito, frame)}
+          mouth={mouthAt(cues.palito ?? [], frame)}
           lookX={0.8}
           rightArm={palitoWave}
           tilt={(1 - enter) * -12}
@@ -193,7 +189,7 @@ export const Episode01: React.FC<Episode01Props> = ({thumbnail = false}) => {
           x={BOLOTA_X}
           y={FLOOR - 220 * jump}
           expression={bolotaExpression}
-          mouth={mouthAt(cues.bolota, frame)}
+          mouth={mouthAt(cues.bolota ?? [], frame)}
           lookX={bolotaLookX}
           lookY={frame < T.updateStart && frame > T.pressStart ? -0.6 : 0}
           rightArm={bolotaRightArm}
@@ -229,8 +225,8 @@ export const Episode01: React.FC<Episode01Props> = ({thumbnail = false}) => {
         </div>
       ) : (
         <>
-          <Captions lines={captions} frame={frame} fps={fps} speakerColors={SPEAKER_COLORS} speakerNames={SPEAKER_NAMES} />
-          <EpisodeAudio data={dialogue} fps={fps} />
+          <Captions lines={TIMELINE.lines} frame={frame} fps={fps} speakerColors={SPEAKER_COLORS} speakerNames={SPEAKER_NAMES} />
+          <EpisodeAudio dialogue={dialogue} lines={TIMELINE.lines} fps={fps} />
         </>
       )}
     </AbsoluteFill>

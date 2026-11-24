@@ -109,3 +109,84 @@ export const mouthAt = (cues: MouthCue[], frame: number): MouthShape | null => {
   }
   return null;
 };
+
+/** Alinhamento por caractere devolvido pela ElevenLabs (endpoint /with-timestamps). */
+export type CharAlignment = {
+  characters: string[];
+  starts: number[];
+  ends: number[];
+};
+
+const LABIALS = new Set(['m', 'b', 'p']);
+const isLetter = (c: string): boolean => /\p{L}/u.test(c);
+
+const shapeForChar = (c: string): MouthShape | null => {
+  const lower = c.toLowerCase();
+  if (/[aeiouáéíóúâêôãõàü]/.test(lower)) {
+    return shapeForVowel(lower);
+  }
+  if (LABIALS.has(lower)) {
+    return 'closed';
+  }
+  if (isLetter(c)) {
+    return 'small';
+  }
+  return null; // espaço/pontuação
+};
+
+/**
+ * Converte o alinhamento por caractere da ElevenLabs em cues de boca.
+ * Vogais definem a forma; m/b/p fecham; demais consoantes ficam entreabertas;
+ * pausas (espaço/pontuação) longas fecham a boca. Cues com menos de 2 frames são absorvidos.
+ */
+export const cuesFromAlignment = (a: CharAlignment, fps: number, offsetFrame: number): MouthCue[] => {
+  const raw: MouthCue[] = [];
+  a.characters.forEach((c, i) => {
+    const start = offsetFrame + Math.round(a.starts[i] * fps);
+    const end = offsetFrame + Math.round(a.ends[i] * fps);
+    const pause = a.ends[i] - a.starts[i] > 0.12;
+    const shape = shapeForChar(c) ?? (pause ? 'closed' : 'small');
+    if (end <= start) {
+      return;
+    }
+    const prev = raw[raw.length - 1];
+    if (prev && prev.shape === shape && prev.endFrame >= start) {
+      prev.endFrame = end;
+    } else {
+      raw.push({startFrame: start, endFrame: end, shape});
+    }
+  });
+  // Absorve cues muito curtos no anterior para evitar "tremedeira" da boca.
+  const merged: MouthCue[] = [];
+  for (const cue of raw) {
+    const prev = merged[merged.length - 1];
+    if (prev && cue.endFrame - cue.startFrame < 2) {
+      prev.endFrame = cue.endFrame;
+    } else {
+      merged.push({...cue});
+    }
+  }
+  // Garante a boca fechada ao final da fala.
+  const last = merged[merged.length - 1];
+  if (last && last.shape !== 'closed') {
+    merged.push({startFrame: last.endFrame, endFrame: last.endFrame + 3, shape: 'closed'});
+  }
+  return merged;
+};
+
+/** Frame em que cada palavra começa (para legendas sincronizadas com a voz real). */
+export const wordFramesFromAlignment = (a: CharAlignment, fps: number, offsetFrame: number): number[] => {
+  const frames: number[] = [];
+  let atWordStart = true;
+  a.characters.forEach((c, i) => {
+    if (c === ' ') {
+      atWordStart = true;
+      return;
+    }
+    if (atWordStart) {
+      frames.push(offsetFrame + Math.round(a.starts[i] * fps));
+      atWordStart = false;
+    }
+  });
+  return frames;
+};

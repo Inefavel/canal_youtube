@@ -1,26 +1,112 @@
 {
   "episode": "ep01",
   "title": "O Café da Segunda",
-  "durationSeconds": 30,
-  "music": {"id": "ep01-bg", "bpm": 100, "volume": 0.16},
+  "durationSeconds": 31.5,
+  "music": {
+    "id": "ep01-bg",
+    "bpm": 100,
+    "volume": 0.16
+  },
   "lines": [
-    {"id": "l1", "speaker": "bolota", "text": "Segunda-feira. Eu só preciso de UM café.", "start": 0.3, "end": 2.7},
-    {"id": "l2", "speaker": "maquina", "text": "Atualização obrigatória. Tempo estimado: três horas.", "start": 3.8, "end": 6.0},
-    {"id": "l3", "speaker": "bolota", "text": "TRÊS HORAS?!", "start": 6.3, "end": 7.6},
-    {"id": "l4", "speaker": "palito", "text": "Relaxa. Se ninguém olhar, vai mais rápido.", "start": 9.0, "end": 11.5},
-    {"id": "l5", "speaker": "bolota", "text": "Isso não faz o menor sentido.", "start": 11.8, "end": 13.5},
-    {"id": "l6", "speaker": "maquina", "text": "Novidade: agora servimos apenas chá de camomila.", "start": 21.3, "end": 23.4},
-    {"id": "l7", "speaker": "palito", "text": "Olha só... relaxante!", "start": 24.5, "end": 25.8},
-    {"id": "l8", "speaker": "bolota", "text": "...Eu odeio segunda.", "start": 27.0, "end": 28.8}
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Segunda-feira. Eu só preciso de UM café.",
+      "start": 0.2,
+      "end": 3.03,
+      "tts": "Segunda-feira. Eu só preciso de um café."
+    },
+    {
+      "id": "l2",
+      "speaker": "maquina",
+      "text": "Atualização obrigatória. Tempo estimado: três horas.",
+      "start": 4.0,
+      "end": 8.37
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "TRÊS HORAS?!",
+      "start": 8.5,
+      "end": 9.62,
+      "tts": "Três horas?!"
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Relaxa. Se ninguém olhar, vai mais rápido.",
+      "start": 10.6,
+      "end": 13.43
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "Isso não faz o menor sentido.",
+      "start": 13.6,
+      "end": 15.69
+    },
+    {
+      "id": "l6",
+      "speaker": "maquina",
+      "text": "Novidade: agora servimos apenas chá de camomila.",
+      "start": 21.8,
+      "end": 25.84
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "Olha só... relaxante!",
+      "start": 26.0,
+      "end": 27.81
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio segunda.",
+      "start": 28.3,
+      "end": 29.79
+    }
   ],
   "sfx": [
-    {"id": "s1", "type": "click", "at": 3.2},
-    {"id": "s2", "type": "ding", "at": 3.6},
-    {"id": "s3", "type": "boing", "at": 6.3},
-    {"id": "s4", "type": "whoosh", "at": 8.0},
-    {"id": "s5", "type": "whoosh", "at": 14.5},
-    {"id": "s6", "type": "ding", "at": 21.0},
-    {"id": "s7", "type": "pop", "at": 23.6},
-    {"id": "s8", "type": "boing", "at": 26.2}
+    {
+      "id": "s1",
+      "type": "click",
+      "at": 3.5
+    },
+    {
+      "id": "s2",
+      "type": "ding",
+      "at": 3.9
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "at": 8.5
+    },
+    {
+      "id": "s4",
+      "type": "whoosh",
+      "at": 9.9
+    },
+    {
+      "id": "s5",
+      "type": "whoosh",
+      "at": 15.9
+    },
+    {
+      "id": "s6",
+      "type": "ding",
+      "at": 21.5
+    },
+    {
+      "id": "s7",
+      "type": "pop",
+      "at": 24.6
+    },
+    {
+      "id": "s8",
+      "type": "boing",
+      "at": 27.8
+    }
   ]
 }

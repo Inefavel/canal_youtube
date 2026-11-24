@@ -9,6 +9,8 @@ export type CaptionLine = {
   text: string;
   startFrame: number;
   endFrame: number;
+  /** Frame de início de cada palavra (voz real). Sem isso, as palavras avançam de forma linear. */
+  wordFrames?: number[];
 };
 
 type CaptionsProps = {
@@ -19,6 +21,17 @@ type CaptionsProps = {
   speakerNames: Record<string, string>;
 };
 
+/** Progresso "em palavras" (ex.: 2.4 = terceira palavra sendo dita) a partir dos frames de cada palavra. */
+const wordProgress = (wordFrames: number[], endFrame: number, frame: number): number => {
+  for (let i = wordFrames.length - 1; i >= 0; i--) {
+    if (frame >= wordFrames[i]) {
+      const next = wordFrames[i + 1] ?? endFrame;
+      return Math.min(i + 1, i + (frame - wordFrames[i]) / Math.max(1, next - wordFrames[i]));
+    }
+  }
+  return 0;
+};
+
 /** Legenda dinâmica palavra a palavra, no topo da zona segura dos Shorts (não cobre os personagens). */
 export const Captions: React.FC<CaptionsProps> = ({lines, frame, fps, speakerColors, speakerNames}) => {
   const HOLD = 8; // frames que a legenda fica após o fim da fala
@@ -27,10 +40,12 @@ export const Captions: React.FC<CaptionsProps> = ({lines, frame, fps, speakerCol
     return null;
   }
   const words = line.text.split(' ');
-  const progress = interpolate(frame, [line.startFrame, line.endFrame], [0, words.length], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
+  const progress = line.wordFrames
+    ? wordProgress(line.wordFrames, line.endFrame, frame)
+    : interpolate(frame, [line.startFrame, line.endFrame], [0, words.length], {
+        extrapolateLeft: 'clamp',
+        extrapolateRight: 'clamp',
+      });
   const pop = spring({frame: frame - line.startFrame, fps, config: MOTION.springSnappy});
   const fadeOut = interpolate(frame, [line.endFrame, line.endFrame + HOLD], [1, 0], {
     extrapolateLeft: 'clamp',

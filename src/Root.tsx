@@ -1,9 +1,7 @@
 import React from 'react';
 import {Composition, Still} from 'remotion';
 import {VIDEO} from './config/tokens';
-import {sec} from './config/timing';
-import {Episode01} from './episodes/ep01-cafe-segunda/Episode01';
-import ep01 from './episodes/ep01-cafe-segunda/dialogue.json';
+import {Episode01, TIMELINE as EP01} from './episodes/ep01-cafe-segunda/Episode01';
 
 /** Registro de todos os episódios. Para um novo episódio: crie a pasta em src/episodes e adicione uma <Composition>. */
 export const RemotionRoot: React.FC = () => (
@@ -11,7 +9,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition
       id="Ep01CafeSegunda"
       component={Episode01}
-      durationInFrames={sec(ep01.durationSeconds)}
+      durationInFrames={EP01.durationInFrames}
       fps={VIDEO.fps}
       width={VIDEO.width}
       height={VIDEO.height}
