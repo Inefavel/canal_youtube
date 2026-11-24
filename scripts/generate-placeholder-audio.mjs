@@ -159,6 +159,20 @@ const SFX = {
     });
     return b;
   },
+  beep: () => {
+    // bipe duplo de despertador digital
+    const b = empty(0.4);
+    addTone(b, 0, 0.12, 2000, 0.25, 'square');
+    addTone(b, 0.18, 0.12, 2000, 0.25, 'square');
+    return b;
+  },
+  buzz: () => {
+    // celular vibrando na mesa
+    const b = empty(0.9);
+    addTone(b, 0, 0.35, 140, 0.45, 'square');
+    addTone(b, 0.5, 0.35, 140, 0.45, 'square');
+    return b;
+  },
   alarm: () => {
     // sirene "uí-uó" de bloqueio
     const b = empty(1.6);

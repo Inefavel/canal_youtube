@@ -3,6 +3,7 @@ import {Composition, Still} from 'remotion';
 import {VIDEO} from './config/tokens';
 import {Episode01, TIMELINE as EP01} from './episodes/ep01-cafe-segunda/Episode01';
 import {Episode02, TIMELINE as EP02} from './episodes/ep02-senha-perfeita/Episode02';
+import {Episode03, TIMELINE as EP03} from './episodes/ep03-despertador/Episode03';
 import {BANNER, ChannelBanner} from './branding/ChannelBanner';
 import {PROFILE, ProfilePicture} from './branding/ProfilePicture';
 import {PROMO, PromoPost} from './branding/PromoPost';
@@ -28,6 +29,15 @@ export const RemotionRoot: React.FC = () => (
       height={VIDEO.height}
     />
     <Still id="Ep02Thumb" component={Episode02} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition
+      id="Ep03Despertador"
+      component={Episode03}
+      durationInFrames={EP03.durationInFrames}
+      fps={VIDEO.fps}
+      width={VIDEO.width}
+      height={VIDEO.height}
+    />
+    <Still id="Ep03Thumb" component={Episode03} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
     <Still id="ProfilePicture" component={ProfilePicture} width={PROFILE.width} height={PROFILE.height} />
     <Still id="PromoPost" component={PromoPost} width={PROMO.width} height={PROMO.height} />
     <Still id="ChannelBanner" component={ChannelBanner} defaultProps={{showSafeArea: false}} width={BANNER.width} height={BANNER.height} />

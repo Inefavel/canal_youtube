@@ -51,6 +51,18 @@ export const COLORS = {
   plantPot: '#E2725B',
   plant: '#3FB27F',
 
+  // Cenário (quarto)
+  bedroomWall: '#EADCF8',
+  bedroomWallStripe: '#E1CEF4',
+  bedFrame: '#8E6C88',
+  blanket: '#4ECDC4',
+  blanketDark: '#3BAFA6',
+  pillow: '#FFFFFF',
+  rug: '#F8A5C2',
+  nightSky: '#2C3E73',
+  daySky: '#9AD8FF',
+  clockDigits: '#FF4757',
+
   // Props (computador)
   monitor: '#2F3542',
   screenBg: '#F5F7FB',
