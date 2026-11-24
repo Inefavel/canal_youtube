@@ -43,6 +43,21 @@ export const COLORS = {
   tea: '#C9D86B',
   cup: '#FFFFFF',
 
+  // Cenário (escritório em casa)
+  officeWall: '#DDEBFF',
+  officeWallStripe: '#CFE1FA',
+  desk: '#B07A4E',
+  deskTop: '#D9A06B',
+  plantPot: '#E2725B',
+  plant: '#3FB27F',
+
+  // Props (computador)
+  monitor: '#2F3542',
+  screenBg: '#F5F7FB',
+  bankBlue: '#2E5BFF',
+  ok: '#20BF6B',
+  danger: '#EB3B5A',
+
   // Marca (foto de perfil, banner)
   brand: '#FFD32A',
   brandDeep: '#F7B500',

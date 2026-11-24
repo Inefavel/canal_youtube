@@ -4,7 +4,7 @@ Estrutura de cada um: **gancho (0–3 s) → conflito → Palito piora → virad
 
 | # | Título | Pilar | Gancho (0–3 s) | Virada / punchline | Cenário |
 |---|---|---|---|---|---|
-| 1 | **A Senha Perfeita** | Tecnologia | Bolota: "Só preciso entrar no banco." | O site exige senha com maiúscula, número, símbolo, emoji e "o nome do seu primeiro bicho". Palito sugere "senha123". O site aceita… e o Bolota é bloqueado por "senha fraca demais para ser verdade". | Novo: mesa com computador |
+| 1 | ✅ **A Senha Perfeita** (EP02 produzido) | Tecnologia | Bolota: "Só preciso entrar no banco." | O site exige senha com maiúscula, número, símbolo, emoji e "o nome do seu primeiro bicho". Palito sugere "senha123". O site aceita… e o Bolota é bloqueado por "senha fraca demais para ser verdade". | Novo: mesa com computador |
 | 2 | **O Despertador** | Segunda-feira | Close no Bolota dormindo; o despertador toca. | Ele aperta "soneca" 9 vezes. Palito acorda animado: "Hoje é sábado!". O Bolota volta a dormir feliz… e o celular avisa: "Reunião em 5 minutos". | Novo: quarto |
 | 3 | **Academia Amanhã** | Vida adulta | Bolota de faixa na cabeça: "Hoje eu começo!" | Montagem rápida de desculpas (chuva, cansaço, segunda, lua cheia). Palito chega malhado de uma semana só. Bolota: "…Amanhã eu começo." | Reaproveita: cozinha + cartelas |
 | 4 | **Reunião que Podia Ser um E-mail** | Trabalho | Tela: "Reunião rápida — 2 min". | Relógio dispara (time-lapse como no EP01). Palito, no fim: "Alguma dúvida?". Bolota levanta a mão. Todos olham para ele com ódio. | Novo: sala de reunião |

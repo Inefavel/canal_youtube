@@ -149,6 +149,25 @@ const SFX = {
     addNoise(b, 0, 0.5, 1.2, 42);
     return b;
   },
+  typing: () => {
+    // ~1,2 s de teclas com ritmo levemente irregular
+    const b = empty(1.2);
+    const hits = [0, 0.09, 0.17, 0.3, 0.38, 0.5, 0.57, 0.7, 0.81, 0.88, 1.02];
+    hits.forEach((t, i) => {
+      addNoise(b, t, 0.035, 0.9, 11 + i);
+      addTone(b, t, 0.02, 2400 + (i % 3) * 300, 0.12, 'square');
+    });
+    return b;
+  },
+  alarm: () => {
+    // sirene "uí-uó" de bloqueio
+    const b = empty(1.6);
+    for (let i = 0; i < 4; i++) {
+      addTone(b, i * 0.4, 0.2, 880, 0.22, 'square');
+      addTone(b, i * 0.4 + 0.2, 0.2, 660, 0.22, 'square');
+    }
+    return b;
+  },
   pop: () => {
     const b = empty(0.15);
     addTone(b, 0, 0.12, 600, 0.6, 'soft', -0.6);

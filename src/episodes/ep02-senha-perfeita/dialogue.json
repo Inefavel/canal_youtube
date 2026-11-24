@@ -1,0 +1,131 @@
+{
+  "episode": "ep02",
+  "title": "A Senha Perfeita",
+  "durationSeconds": 37.6,
+  "music": {
+    "id": "ep02-bg",
+    "bpm": 112,
+    "volume": 0.14
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Só preciso pagar UMA conta. Coisa rápida.",
+      "tts": "Só preciso pagar uma conta. Coisa rápida.",
+      "start": 0.2,
+      "end": 2.71
+    },
+    {
+      "id": "l2",
+      "speaker": "site",
+      "text": "Crie uma nova senha com: uma maiúscula, um número, um símbolo e um emoji.",
+      "start": 4.4,
+      "end": 10.95
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Um EMOJI?!",
+      "tts": "Um emoji?!",
+      "start": 11.1,
+      "end": 12.12
+    },
+    {
+      "id": "l4",
+      "speaker": "site",
+      "text": "E o nome do seu primeiro bichinho de estimação.",
+      "start": 12.5,
+      "end": 15.29
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "Eu nunca tive um bichinho!",
+      "start": 15.5,
+      "end": 17.27
+    },
+    {
+      "id": "l6",
+      "speaker": "palito",
+      "text": "Relaxa. Coloca senha123. Eu uso pra tudo.",
+      "start": 18.1,
+      "end": 21.4
+    },
+    {
+      "id": "l7",
+      "speaker": "bolota",
+      "text": "Isso nunca vai funcionar.",
+      "start": 21.6,
+      "end": 23.18
+    },
+    {
+      "id": "l8",
+      "speaker": "site",
+      "text": "Senha fraca demais para ser verdade. Conta bloqueada por segurança.",
+      "start": 25.6,
+      "end": 30.57
+    },
+    {
+      "id": "l9",
+      "speaker": "palito",
+      "text": "Viu só? Agora ninguém entra. Nem você!",
+      "start": 30.9,
+      "end": 33.96
+    },
+    {
+      "id": "l10",
+      "speaker": "bolota",
+      "text": "...Era só um boleto.",
+      "start": 34.4,
+      "end": 36.12
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "typing",
+      "at": 2.8
+    },
+    {
+      "id": "s2",
+      "type": "pop",
+      "at": 4.2
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "at": 11.1
+    },
+    {
+      "id": "s4",
+      "type": "pop",
+      "at": 12.4
+    },
+    {
+      "id": "s5",
+      "type": "whoosh",
+      "at": 17.5
+    },
+    {
+      "id": "s6",
+      "type": "typing",
+      "at": 23.3
+    },
+    {
+      "id": "s7",
+      "type": "ding",
+      "at": 24.4
+    },
+    {
+      "id": "s8",
+      "type": "alarm",
+      "at": 25.5
+    },
+    {
+      "id": "s9",
+      "type": "boing",
+      "at": 33.9
+    }
+  ]
+}

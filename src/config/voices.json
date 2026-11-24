@@ -5,17 +5,46 @@
     "bolota": {
       "voice": "Callum",
       "voiceId": "N2lVS1w4EtoT3dr4eOWO",
-      "settings": {"stability": 0.35, "similarity_boost": 0.8, "style": 0.55, "use_speaker_boost": true, "speed": 0.95}
+      "settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.8,
+        "style": 0.55,
+        "use_speaker_boost": true,
+        "speed": 0.95
+      }
     },
     "palito": {
       "voice": "Will",
       "voiceId": "bIHbv24MWmeRgasZH58o",
-      "settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.4, "use_speaker_boost": true, "speed": 1.0}
+      "settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.8,
+        "style": 0.4,
+        "use_speaker_boost": true,
+        "speed": 1.0
+      }
     },
     "maquina": {
       "voice": "Daniel",
       "voiceId": "onwK4e9ZLuTAKqWW03F9",
-      "settings": {"stability": 0.9, "similarity_boost": 0.7, "style": 0.0, "use_speaker_boost": false, "speed": 1.05}
+      "settings": {
+        "stability": 0.9,
+        "similarity_boost": 0.7,
+        "style": 0.0,
+        "use_speaker_boost": false,
+        "speed": 1.05
+      }
+    },
+    "site": {
+      "voice": "Daniel",
+      "voiceId": "onwK4e9ZLuTAKqWW03F9",
+      "settings": {
+        "stability": 0.9,
+        "similarity_boost": 0.7,
+        "style": 0.0,
+        "use_speaker_boost": false,
+        "speed": 1.05
+      }
     }
   }
 }

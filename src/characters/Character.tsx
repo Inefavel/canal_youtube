@@ -111,7 +111,8 @@ export const Character: React.FC<CharacterProps & {id: CharacterId}> = ({
   const centerX = bodyX + look.bodyWidth / 2;
   const radius = Math.min(look.bodyWidth, look.bodyHeight) * 0.48;
 
-  const blink = expression === 'sleeping' ? 0 : blinkAt(frame, blinkSeed);
+  // Sem piscada quando dormindo ou em choque (uma piscada no susto apaga o olhar arregalado).
+  const blink = expression === 'sleeping' || expression === 'shocked' ? 0 : blinkAt(frame, blinkSeed);
   const lid = Math.max(spec.lid, blink);
   // Tique: o olho direito treme e a pálpebra pisca rápido.
   const twitchLid = twitch > 0 ? Math.min(1, lid + twitch * 0.5 * (frame % 4 < 2 ? 1 : 0)) : lid;

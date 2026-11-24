@@ -1,0 +1,144 @@
+import React from 'react';
+import {COLORS, FONTS} from '../config/tokens';
+
+export type PasswordRule = {label: string; ok: boolean};
+
+export type ComputerScreen =
+  | {kind: 'login'}
+  | {kind: 'rules'; rules: PasswordRule[]}
+  | {kind: 'accepted'}
+  | {kind: 'blocked'; flash: number};
+
+type ComputerProps = {
+  /** Base (centro) do monitor, apoiada na mesa. */
+  x: number;
+  y: number;
+  screen: ComputerScreen;
+  /** Quantos caracteres (bolinhas) aparecem no campo de senha. */
+  typed: number;
+  /** Cursor piscando no campo de senha. */
+  cursorOn: boolean;
+  shake?: number;
+};
+
+const W = 580;
+const H = 480;
+const SCREEN = {x: 22, y: 22, w: W - 44, h: 370};
+
+const Header: React.FC<{color: string; title: string}> = ({color, title}) => (
+  <div style={{background: color, color: '#fff', fontFamily: FONTS.display, fontSize: 30, padding: '10px 16px'}}>{title}</div>
+);
+
+export const Computer: React.FC<ComputerProps> = ({x, y, screen, typed, cursorOn, shake = 0}) => {
+  const field = (
+    <div
+      style={{
+        margin: '10px 14px',
+        height: 56,
+        border: `3px solid ${COLORS.ink}`,
+        borderRadius: 8,
+        background: '#fff',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '0 10px',
+        fontFamily: FONTS.display,
+        fontSize: 36,
+        letterSpacing: 6,
+        color: COLORS.ink,
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      {'•'.repeat(Math.min(typed, 16))}
+      <span style={{opacity: cursorOn ? 1 : 0, marginLeft: 2}}>|</span>
+    </div>
+  );
+
+  let body: React.ReactNode;
+  switch (screen.kind) {
+    case 'login':
+      body = (
+        <>
+          <Header color={COLORS.bankBlue} title="BANCO SEGURO" />
+          <div style={{fontFamily: FONTS.body, fontSize: 30, margin: '24px 16px 0', color: COLORS.ink}}>Digite sua senha:</div>
+          {field}
+        </>
+      );
+      break;
+    case 'rules':
+      body = (
+        <>
+          <Header color={COLORS.bankBlue} title="CRIE UMA NOVA SENHA" />
+          <div style={{padding: '10px 16px', fontFamily: FONTS.body, fontSize: 29, lineHeight: 1.3, color: COLORS.ink, fontWeight: 600}}>
+            {screen.rules.map((r) => (
+              <div key={r.label} style={{display: 'flex', gap: 8}}>
+                <span style={{color: r.ok ? COLORS.ok : COLORS.danger, fontFamily: FONTS.display, width: 30}}>{r.ok ? '✓' : '✗'}</span>
+                <span>{r.label}</span>
+              </div>
+            ))}
+          </div>
+        </>
+      );
+      break;
+    case 'accepted':
+      body = (
+        <div style={{height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#E9FBF1'}}>
+          <div style={{fontFamily: FONTS.display, fontSize: 110, color: COLORS.ok, lineHeight: 1}}>✓</div>
+          <div style={{fontFamily: FONTS.display, fontSize: 46, color: COLORS.ok}}>SENHA ACEITA!</div>
+        </div>
+      );
+      break;
+    case 'blocked':
+      body = (
+        <div
+          style={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+            background: screen.flash > 0.5 ? COLORS.danger : '#7A1F35',
+            color: '#fff',
+            fontFamily: FONTS.display,
+          }}
+        >
+          <div style={{fontSize: 90, lineHeight: 1}}>⚠</div>
+          <div style={{fontSize: 50, lineHeight: 1.05}}>CONTA</div>
+          <div style={{fontSize: 50, lineHeight: 1.05}}>BLOQUEADA</div>
+          <div style={{fontFamily: FONTS.body, fontSize: 24, marginTop: 10}}>Tente novamente em 72 horas</div>
+        </div>
+      );
+      break;
+    default: {
+      const exhaustive: never = screen;
+      return exhaustive;
+    }
+  }
+
+  return (
+    <div style={{position: 'absolute', left: x - W / 2 + shake, top: y - H, width: W, height: H}}>
+      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute'}}>
+        <rect x={W / 2 - 30} y={SCREEN.y + SCREEN.h + 20} width={60} height={60} fill={COLORS.monitor} stroke={COLORS.ink} strokeWidth={8} />
+        <rect x={W / 2 - 110} y={H - 26} width={220} height={22} rx={10} fill={COLORS.monitor} stroke={COLORS.ink} strokeWidth={8} />
+        <rect x={6} y={6} width={W - 12} height={SCREEN.h + 32} rx={22} fill={COLORS.monitor} stroke={COLORS.ink} strokeWidth={10} />
+      </svg>
+      <div
+        style={{
+          position: 'absolute',
+          left: SCREEN.x,
+          top: SCREEN.y,
+          width: SCREEN.w,
+          height: SCREEN.h,
+          background: COLORS.screenBg,
+          borderRadius: 10,
+          overflow: 'hidden',
+        }}
+      >
+        {body}
+      </div>
+    </div>
+  );
+};
+
+export const COMPUTER = {width: W, height: H} as const;

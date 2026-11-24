@@ -10,6 +10,8 @@
     "typecheck": "tsc --noEmit",
     "render:ep01": "npm run audio && remotion render Ep01CafeSegunda out/ep01-cafe-segunda.mp4",
     "thumb:ep01": "remotion still Ep01Thumb out/ep01-thumb.png",
+    "render:ep02": "npm run audio && remotion render Ep02SenhaPerfeita out/ep02-senha-perfeita.mp4",
+    "thumb:ep02": "remotion still Ep02Thumb out/ep02-thumb.png",
     "brand": "remotion still ProfilePicture out/brand/foto-perfil.png && remotion still ChannelBanner out/brand/banner.png"
   },
   "type": "module",
