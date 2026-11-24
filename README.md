@@ -1,4 +1,6 @@
-# canal_youtube
+# Bolota & Palito
+
+Repositório de produção do canal **Bolota & Palito** no YouTube.
 
 Estúdio de **desenho animado programático** para YouTube Shorts (9:16), feito com React, TypeScript e [Remotion](https://www.remotion.dev/). Cada episódio é código: personagens, expressões, lip-sync, câmera, legendas e áudio são gerados e renderizados sem editor de vídeo.
 

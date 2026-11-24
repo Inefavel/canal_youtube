@@ -1,8 +1,8 @@
-# Bíblia do Canal
+# Bíblia do Canal — Bolota & Palito
 
 | Item | Definição |
 |---|---|
-| Nome do canal | **A definir** (sugestões: "Bolota & Palito", "Segunda Sem Café", "Rotina Animada") |
+| Nome do canal | **Bolota & Palito** |
 | Público | Humor geral / adulto jovem (18–35), **não** marcado como "conteúdo para crianças" |
 | Formato | YouTube Shorts 9:16, 1080x1920, 30 fps, 25–45 s |
 | Idioma | Português do Brasil |

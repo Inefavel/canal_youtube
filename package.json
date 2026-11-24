@@ -2,7 +2,7 @@
   "name": "canal-youtube",
   "version": "0.1.0",
   "private": true,
-  "description": "Estúdio de desenho animado programático (Remotion) para YouTube Shorts",
+  "description": "Bolota & Palito — estúdio de desenho animado programático (Remotion) para YouTube Shorts",
   "scripts": {
     "audio": "node scripts/generate-placeholder-audio.mjs",
     "dev": "npm run audio && remotion studio",
