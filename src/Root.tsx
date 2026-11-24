@@ -2,6 +2,8 @@ import React from 'react';
 import {Composition, Still} from 'remotion';
 import {VIDEO} from './config/tokens';
 import {Episode01, TIMELINE as EP01} from './episodes/ep01-cafe-segunda/Episode01';
+import {BANNER, ChannelBanner} from './branding/ChannelBanner';
+import {PROFILE, ProfilePicture} from './branding/ProfilePicture';
 
 /** Registro de todos os episódios. Para um novo episódio: crie a pasta em src/episodes e adicione uma <Composition>. */
 export const RemotionRoot: React.FC = () => (
@@ -15,5 +17,7 @@ export const RemotionRoot: React.FC = () => (
       height={VIDEO.height}
     />
     <Still id="Ep01Thumb" component={Episode01} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="ProfilePicture" component={ProfilePicture} width={PROFILE.width} height={PROFILE.height} />
+    <Still id="ChannelBanner" component={ChannelBanner} defaultProps={{showSafeArea: false}} width={BANNER.width} height={BANNER.height} />
   </>
 );

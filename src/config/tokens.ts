@@ -43,6 +43,10 @@ export const COLORS = {
   tea: '#C9D86B',
   cup: '#FFFFFF',
 
+  // Marca (foto de perfil, banner)
+  brand: '#FFD32A',
+  brandDeep: '#F7B500',
+
   // UI / legendas
   captionText: '#FFFFFF',
   captionStroke: '#1E1B2E',

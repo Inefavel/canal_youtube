@@ -13,6 +13,7 @@ npm run dev          # gera os áudios placeholder e abre o Remotion Studio
 npm run render:ep01  # renderiza out/ep01-cafe-segunda.mp4
 npm run thumb:ep01   # gera out/ep01-thumb.png
 npm run typecheck
+npm run brand        # foto de perfil (800x800) e banner (2560x1440) em out/brand/
 ```
 
 Para usar um Chrome/Chromium já instalado em vez do que o Remotion baixa, defina `REMOTION_BROWSER=/caminho/do/chrome`.
@@ -26,6 +27,7 @@ src/
   lipsync/       cues.ts (texto → bocas · Rhubarb JSON → bocas · busca binária por frame)
   components/    Camera (zoom/tremor) · Captions (palavra a palavra) · Transitions (íris, cartela, Zzz, impacto)
                  EpisodeAudio (monta falas, efeitos e trilha do dialogue.json) · keyframes (kf, step)
+  branding/      ProfilePicture.tsx (foto de perfil) · ChannelBanner.tsx (banner com área segura do YouTube)
   scenes/        Kitchen.tsx (cenário estático e memoizado)
   props/         CoffeeMachine, Cup, WallClock
   episodes/      ep01-cafe-segunda/ dialogue.json (roteiro e tempos) · Episode01.tsx · METADATA.md
