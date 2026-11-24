@@ -1,0 +1,85 @@
+{
+  "episode": "ep10",
+  "title": "Feliz Sexta-feira",
+  "music": {
+    "id": "ep10-bg",
+    "bpm": 124,
+    "volume": 0.14
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "SEXTA-FEIRA! O fim de semana vai ser épico!",
+      "gap": 0.3,
+      "tts": "Sexta-feira! O fim de semana vai ser épico!"
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Sábado: praia. Domingo: trilha. Eu vou viver!",
+      "gap": 0.4
+    },
+    {
+      "id": "l3",
+      "speaker": "palito",
+      "text": "Que plano incrível! Me chama!",
+      "gap": 0.5
+    },
+    {
+      "id": "l4",
+      "speaker": "bolota",
+      "text": "Peraí... já acabou o fim de semana?",
+      "gap": 4.6
+    },
+    {
+      "id": "l5",
+      "speaker": "palito",
+      "text": "Bom dia! Hoje é segunda. Dessa vez é verdade!",
+      "gap": 0.4
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "...Eu odeio segunda.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "whoosh",
+      "line": "l3",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s2",
+      "type": "whoosh",
+      "line": "l4",
+      "edge": "start",
+      "offset": -4.4
+    },
+    {
+      "id": "s3",
+      "type": "beep",
+      "line": "l4",
+      "edge": "start",
+      "offset": -1.2
+    },
+    {
+      "id": "s4",
+      "type": "beep",
+      "line": "l4",
+      "edge": "start",
+      "offset": -0.8
+    },
+    {
+      "id": "s5",
+      "type": "boing",
+      "line": "l6",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "episode": "ep09",
+  "title": "O Áudio de 5 Minutos",
+  "music": {
+    "id": "ep09-bg",
+    "bpm": 110,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "palito",
+      "text": "Te mandei um áudio rapidinho!",
+      "gap": 0.3
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Sete minutos e quarenta e três?!",
+      "gap": 0.5
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Tá. Vou ouvir no 2x.",
+      "gap": 0.4,
+      "tts": "Tá. Vou ouvir no dois xis."
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Então, sabe aquele dia que a gente foi no mercado e eu esqueci a sacola, aí eu voltei, e o moço do caixa falou que...",
+      "gap": 0.5,
+      "rate": 2,
+      "offscreen": true
+    },
+    {
+      "id": "l5",
+      "speaker": "palito",
+      "text": "...mas depois eu te conto pessoalmente!",
+      "gap": 1.2,
+      "offscreen": true
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "Palito... você tá DO MEU LADO!",
+      "gap": 0.5,
+      "tts": "Palito... você tá do meu lado!"
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "Eu sei. Mas por áudio é mais rápido!",
+      "gap": 0.3
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio áudio.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "buzz",
+      "line": "l1",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s2",
+      "type": "boing",
+      "line": "l2",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s3",
+      "type": "click",
+      "line": "l3",
+      "edge": "end",
+      "offset": 0.2
+    },
+    {
+      "id": "s4",
+      "type": "boing",
+      "line": "l6",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s5",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

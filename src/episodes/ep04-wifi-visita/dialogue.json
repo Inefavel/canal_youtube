@@ -1,0 +1,111 @@
+{
+  "episode": "ep04",
+  "title": "Wi-Fi da Visita",
+  "music": {
+    "id": "ep04-bg",
+    "bpm": 108,
+    "volume": 0.14
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "palito",
+      "text": "E aí, Bolota! Qual é a senha do Wi-Fi?",
+      "gap": 0.4
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Tá atrás do roteador. Anota aí.",
+      "gap": 0.4
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "X minúsculo, sete, K maiúsculo, arroba, nove, Q, Z, exclamação...",
+      "gap": 0.5
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Calma! Mais devagar!",
+      "gap": 0.2
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "É O maiúsculo, não zero! Pela décima vez!",
+      "gap": 4.4
+    },
+    {
+      "id": "l6",
+      "speaker": "palito",
+      "text": "Conectou! Ah... eu nem precisava. Tenho 5G ilimitado.",
+      "gap": 0.9
+    },
+    {
+      "id": "l7",
+      "speaker": "bolota",
+      "text": "...Eu odeio visitas.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "whoosh",
+      "line": "l1",
+      "edge": "start",
+      "offset": -0.4
+    },
+    {
+      "id": "s2",
+      "type": "typing",
+      "line": "l4",
+      "edge": "end",
+      "offset": 0.3
+    },
+    {
+      "id": "s3",
+      "type": "buzz",
+      "line": "l4",
+      "edge": "end",
+      "offset": 1.3
+    },
+    {
+      "id": "s4",
+      "type": "buzz",
+      "line": "l4",
+      "edge": "end",
+      "offset": 2.5
+    },
+    {
+      "id": "s5",
+      "type": "buzz",
+      "line": "l4",
+      "edge": "end",
+      "offset": 3.7
+    },
+    {
+      "id": "s6",
+      "type": "boing",
+      "line": "l5",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s7",
+      "type": "ding",
+      "line": "l6",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s8",
+      "type": "boing",
+      "line": "l7",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

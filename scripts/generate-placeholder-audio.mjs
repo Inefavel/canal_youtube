@@ -107,7 +107,11 @@ const VOICES = {
 
 const renderLine = (line) => {
   const voice = VOICES[line.speaker] ?? VOICES.bolota;
-  const duration = line.end - line.start;
+  // Sem start/end absolutos (falas encadeadas): mesma estimativa de src/components/timeline.ts
+  const duration =
+    line.start !== undefined && line.end !== undefined
+      ? line.end - line.start
+      : Math.max(0.8, syllables(line.text).length * 0.18 + 0.3);
   const buf = empty(duration);
   const groups = syllables(line.text);
   const slot = duration / Math.max(1, groups.length);
@@ -232,7 +236,7 @@ for (const folder of readdirSync(episodesDir)) {
     if (writeWav(join(audioDir, ep.episode, `${line.id}.wav`), renderLine(line))) written++;
   }
   if (ep.music) {
-    if (writeWav(join(audioDir, 'music', `${ep.music.id}.wav`), renderMusic(ep.durationSeconds, ep.music.bpm))) written++;
+    if (writeWav(join(audioDir, 'music', `${ep.music.id}.wav`), renderMusic(ep.durationSeconds ?? 60, ep.music.bpm))) written++;
   }
   for (const s of ep.sfx) {
     if (!SFX[s.type]) throw new Error(`SFX desconhecido "${s.type}" em ${file}`);

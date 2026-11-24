@@ -229,7 +229,7 @@ export const Episode02: React.FC<Episode02Props> = ({thumbnail = false}) => {
       ) : (
         <>
           <Captions lines={TIMELINE.lines} frame={frame} fps={fps} speakerColors={SPEAKER_COLORS} speakerNames={SPEAKER_NAMES} />
-          <EpisodeAudio dialogue={dialogue} lines={TIMELINE.lines} fps={fps} />
+          <EpisodeAudio dialogue={dialogue} timeline={TIMELINE} />
         </>
       )}
     </AbsoluteFill>

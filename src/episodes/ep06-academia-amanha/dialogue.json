@@ -1,0 +1,103 @@
+{
+  "episode": "ep06",
+  "title": "Academia Amanhã",
+  "music": {
+    "id": "ep06-bg",
+    "bpm": 120,
+    "volume": 0.14
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Hoje eu começo a academia. Tá decidido!",
+      "gap": 0.3
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Tá chovendo... amanhã eu vou.",
+      "gap": 1.4
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Tô muito cansado. Amanhã.",
+      "gap": 1.4
+    },
+    {
+      "id": "l4",
+      "speaker": "bolota",
+      "text": "Lua cheia. Não dá pra treinar.",
+      "gap": 1.4
+    },
+    {
+      "id": "l5",
+      "speaker": "palito",
+      "text": "Olha só! Uma semana de treino! Sente esse muque!",
+      "gap": 1.6
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "Uma semana?! Como assim?",
+      "gap": 0.3
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "É só começar, ué.",
+      "gap": 0.3
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Amanhã eu começo.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "whoosh",
+      "line": "l2",
+      "edge": "start",
+      "offset": -1.3
+    },
+    {
+      "id": "s2",
+      "type": "whoosh",
+      "line": "l3",
+      "edge": "start",
+      "offset": -1.3
+    },
+    {
+      "id": "s3",
+      "type": "whoosh",
+      "line": "l4",
+      "edge": "start",
+      "offset": -1.3
+    },
+    {
+      "id": "s4",
+      "type": "whoosh",
+      "line": "l5",
+      "edge": "start",
+      "offset": -1.5
+    },
+    {
+      "id": "s5",
+      "type": "boing",
+      "line": "l6",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s6",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

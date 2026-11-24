@@ -36,10 +36,36 @@ docs/            biblia-do-canal.md
 ```
 
 ## Criando um novo episódio
-1. Copie `src/episodes/ep01-cafe-segunda` para `src/episodes/ep02-<nome>`.
-2. Edite `dialogue.json` (falas, tempos em segundos e efeitos) e o componente do episódio.
-3. Registre a `<Composition>` em `src/Root.tsx` e adicione os scripts `render:ep02` e `thumb:ep02` no `package.json`.
-4. `npm run dev` para iterar, e depois `npm run render:ep02`.
+1. Crie `src/episodes/epNN-<nome>/dialogue.json` com as falas **encadeadas**:
+   ```json
+   {"episode": "ep11", "title": "…", "music": {"id": "ep11-bg", "bpm": 110, "volume": 0.14},
+    "lines": [{"id": "l1", "speaker": "bolota", "text": "…", "gap": 0.3},
+              {"id": "l2", "speaker": "palito", "text": "…", "gap": 1.2}],
+    "sfx": [{"id": "s1", "type": "boing", "line": "l2", "edge": "start", "offset": -0.2}]}
+   ```
+   - `gap`: pausa antes da fala (é aí que cabem montagens e cartelas).
+   - `rate`: velocidade da fala (ex.: 2 = acelerada).
+   - `offscreen`: fala vinda de um aparelho, sem boca de personagem.
+   - `tts`: pronúncia diferente da legenda.
+   - Efeitos presos às falas por `line`, `edge` e `offset`.
+   - A duração é automática: termina 1,6 s após a última fala.
+2. `ELEVENLABS_API_KEY=… npm run voices -- --only=ep11` gera as vozes. Os tempos se ajustam sozinhos.
+3. Escreva `EpisodeNN.tsx` usando `EpisodeShell` (câmera, legendas, áudio, íris e thumbnail) e os helpers de `components/beats.ts`. Derive os marcadores de `startOf`/`endOf` das falas. Use os episódios 04 a 10 como modelo.
+4. Registre a `<Composition>` e o `<Still>` da thumbnail em `src/Root.tsx`, e os scripts `render:epNN` e `thumb:epNN` no `package.json`.
+
+## Episódios
+| # | Título | Cenário |
+|---|---|---|
+| 01 | O Café da Segunda | Cozinha |
+| 02 | A Senha Perfeita | Escritório |
+| 03 | O Despertador | Quarto |
+| 04 | Wi-Fi da Visita | Cozinha |
+| 05 | Atualização 2: A Vingança | Cozinha |
+| 06 | Academia Amanhã | Cozinha |
+| 07 | O Boleto | Cozinha |
+| 08 | Reunião que Podia Ser um E-mail | Escritório |
+| 09 | O Áudio de 5 Minutos | Cozinha |
+| 10 | Feliz Sexta-feira | Cozinha → Quarto |
 
 ## Vozes (ElevenLabs)
 As falas são geradas pela API da ElevenLabs com **tempo por caractere**, que alimenta o lip-sync e as legendas palavra a palavra.

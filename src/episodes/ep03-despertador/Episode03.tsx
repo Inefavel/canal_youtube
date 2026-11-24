@@ -234,7 +234,7 @@ export const Episode03: React.FC<Episode03Props> = ({thumbnail = false}) => {
             body="Quinta-feira · em 5 minutos"
           />
           <Captions lines={TIMELINE.lines} frame={frame} fps={fps} speakerColors={SPEAKER_COLORS} speakerNames={SPEAKER_NAMES} />
-          <EpisodeAudio dialogue={dialogue} lines={TIMELINE.lines} fps={fps} />
+          <EpisodeAudio dialogue={dialogue} timeline={TIMELINE} />
         </>
       )}
     </AbsoluteFill>

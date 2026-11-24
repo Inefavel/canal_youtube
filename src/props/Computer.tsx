@@ -7,7 +7,8 @@ export type ComputerScreen =
   | {kind: 'login'}
   | {kind: 'rules'; rules: PasswordRule[]}
   | {kind: 'accepted'}
-  | {kind: 'blocked'; flash: number};
+  | {kind: 'blocked'; flash: number}
+  | {kind: 'call'; title: string; timer: string; tiles: {name: string; color: string; speaking: boolean; asleep?: boolean}[]};
 
 type ComputerProps = {
   /** Base (centro) do monitor, apoiada na mesa. */
@@ -107,6 +108,38 @@ export const Computer: React.FC<ComputerProps> = ({x, y, screen, typed, cursorOn
           <div style={{fontSize: 50, lineHeight: 1.05}}>CONTA</div>
           <div style={{fontSize: 50, lineHeight: 1.05}}>BLOQUEADA</div>
           <div style={{fontFamily: FONTS.body, fontSize: 24, marginTop: 10}}>Tente novamente em 72 horas</div>
+        </div>
+      );
+      break;
+    case 'call':
+      body = (
+        <div style={{height: '100%', background: '#1E1B2E', display: 'flex', flexDirection: 'column'}}>
+          <div style={{display: 'flex', justifyContent: 'space-between', color: '#fff', fontFamily: FONTS.display, fontSize: 24, padding: '10px 16px'}}>
+            <span>{screen.title}</span>
+            <span style={{color: COLORS.danger}}>● {screen.timer}</span>
+          </div>
+          <div style={{flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, padding: '0 12px 12px'}}>
+            {screen.tiles.map((t) => (
+              <div
+                key={t.name}
+                style={{
+                  background: '#2F3542',
+                  borderRadius: 12,
+                  border: `5px solid ${t.speaking ? '#2ED573' : '#2F3542'}`,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#fff',
+                  fontFamily: FONTS.display,
+                  fontSize: 22,
+                }}
+              >
+                <div style={{width: 64, height: 64, borderRadius: 32, background: t.color, border: '4px solid #fff', marginBottom: 6, opacity: t.asleep ? 0.5 : 1}} />
+                {t.asleep ? `${t.name} (zzz)` : t.name}
+              </div>
+            ))}
+          </div>
         </div>
       );
       break;

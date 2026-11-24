@@ -121,16 +121,14 @@ for (const folder of readdirSync(episodesDir)) {
 
   writeFileSync(voicesPath, JSON.stringify(out, null, 1) + '\n');
 
-  // Avisa quando uma fala real ficou mais longa que o espaço até a próxima fala.
-  const sorted = [...ep.lines].sort((x, y) => x.start - y.start);
-  sorted.forEach((line, i) => {
-    const next = sorted[i + 1];
-    const end = line.start + out.lines[line.id].duration;
+  // Avisa quando uma fala real ficou mais longa que o espaço até a próxima (só para tempos absolutos;
+  // falas encadeadas, sem "start", se reposicionam sozinhas).
+  const absolute = ep.lines.filter((l) => l.start !== undefined).sort((x, y) => x.start - y.start);
+  absolute.forEach((line, i) => {
+    const next = absolute[i + 1];
+    const end = line.start + out.lines[line.id].duration / (line.rate ?? 1);
     if (next && end > next.start - 0.1) {
       console.warn(`  ⚠ ${line.id} termina em ${end.toFixed(2)}s e ${next.id} começa em ${next.start}s: ajuste "start" no dialogue.json`);
-    }
-    if (!next && end > ep.durationSeconds) {
-      console.warn(`  ⚠ ${line.id} termina em ${end.toFixed(2)}s, depois do fim do episódio (${ep.durationSeconds}s)`);
     }
   });
 }

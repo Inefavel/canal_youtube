@@ -1,0 +1,111 @@
+{
+  "episode": "ep05",
+  "title": "Atualização 2: A Vingança",
+  "music": {
+    "id": "ep05-bg",
+    "bpm": 104,
+    "volume": 0.14
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Bom dia, cafeteira. Hoje vai dar tudo certo.",
+      "gap": 0.3
+    },
+    {
+      "id": "l2",
+      "speaker": "maquina",
+      "text": "Nova atualização disponível. Instalar agora?",
+      "gap": 0.6
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "NÃO! Ninguém encosta nessa máquina!",
+      "gap": 0.2,
+      "tts": "Não! Ninguém encosta nessa máquina!"
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Relaxa, deve ser rapidinho.",
+      "gap": 1.0
+    },
+    {
+      "id": "l5",
+      "speaker": "maquina",
+      "text": "Atualização concluída. Seu café está pronto.",
+      "gap": 2.8
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "Funcionou... Eu tô emocionado.",
+      "gap": 0.4
+    },
+    {
+      "id": "l7",
+      "speaker": "maquina",
+      "text": "Novidade: agora todo café é descafeinado.",
+      "gap": 1.2
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio atualização.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "ding",
+      "line": "l2",
+      "edge": "start",
+      "offset": -0.4
+    },
+    {
+      "id": "s2",
+      "type": "boing",
+      "line": "l3",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s3",
+      "type": "whoosh",
+      "line": "l4",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s4",
+      "type": "click",
+      "line": "l4",
+      "edge": "end",
+      "offset": 0.3
+    },
+    {
+      "id": "s5",
+      "type": "ding",
+      "line": "l5",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "s6",
+      "type": "pop",
+      "line": "l7",
+      "edge": "start",
+      "offset": -0.9
+    },
+    {
+      "id": "s7",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

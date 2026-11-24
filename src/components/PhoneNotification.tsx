@@ -13,16 +13,18 @@ type PhoneNotificationProps = {
   app: string;
   title: string;
   body: string;
+  /** Posição final do topo do cartão (padrão: logo abaixo das legendas). */
+  top?: number;
 };
 
 /** Notificação de celular que desliza de cima (fora da câmera, sempre legível). */
-export const PhoneNotification: React.FC<PhoneNotificationProps> = ({frame, fps, start, end, app, title, body}) => {
+export const PhoneNotification: React.FC<PhoneNotificationProps> = ({frame, fps, start, end, app, title, body, top = NOTIFICATION_TOP}) => {
   if (frame < start || frame >= end) {
     return null;
   }
   const inP = spring({frame: frame - start, fps, config: {damping: 14, stiffness: 180, mass: 0.7}});
   const outP = spring({frame: frame - (end - 10), fps, config: {damping: 20, stiffness: 200}});
-  const y = NOTIFICATION_TOP - 260 + 260 * inP - 300 * outP;
+  const y = top - 260 + 260 * inP - 300 * outP;
   return (
     <div
       style={{

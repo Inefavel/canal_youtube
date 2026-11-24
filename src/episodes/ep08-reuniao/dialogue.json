@@ -1,0 +1,88 @@
+{
+  "episode": "ep08",
+  "title": "Reunião que Podia Ser um E-mail",
+  "music": {
+    "id": "ep08-bg",
+    "bpm": 92,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Reunião rápida. Dois minutos, ele disse.",
+      "gap": 0.3
+    },
+    {
+      "id": "l2",
+      "speaker": "chefe",
+      "text": "Bom dia, pessoal! Vou ser bem breve.",
+      "gap": 0.6,
+      "offscreen": true
+    },
+    {
+      "id": "l3",
+      "speaker": "chefe",
+      "text": "Então é isso. Alguma dúvida?",
+      "gap": 3.8,
+      "offscreen": true
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Eu! Tenho só uma perguntinha!",
+      "gap": 0.4,
+      "offscreen": true
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "NÃO, PALITO!",
+      "gap": 0.2,
+      "tts": "Não, Palito!"
+    },
+    {
+      "id": "l6",
+      "speaker": "chefe",
+      "text": "Ótima pergunta! Vamos marcar outra reunião pra discutir.",
+      "gap": 0.4,
+      "offscreen": true
+    },
+    {
+      "id": "l7",
+      "speaker": "bolota",
+      "text": "...Isso podia ser um e-mail.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "pop",
+      "line": "l2",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s2",
+      "type": "whoosh",
+      "line": "l3",
+      "edge": "start",
+      "offset": -3.6
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "line": "l5",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s4",
+      "type": "boing",
+      "line": "l7",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}
