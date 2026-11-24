@@ -1,0 +1,24 @@
+{
+  "name": "canal-youtube",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Estúdio de desenho animado programático (Remotion) para YouTube Shorts",
+  "scripts": {
+    "audio": "node scripts/generate-placeholder-audio.mjs",
+    "dev": "npm run audio && remotion studio",
+    "typecheck": "tsc --noEmit",
+    "render:ep01": "npm run audio && remotion render Ep01CafeSegunda out/ep01-cafe-segunda.mp4",
+    "thumb:ep01": "remotion still Ep01Thumb out/ep01-thumb.png"
+  },
+  "type": "module",
+  "dependencies": {
+    "@remotion/cli": "4.0.540",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.540"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "typescript": "5.6.3"
+  }
+}
