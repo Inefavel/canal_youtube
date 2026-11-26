@@ -1,0 +1,161 @@
+{
+  "episode": "ep11",
+  "title": "O Grupo da Família",
+  "music": {
+    "id": "ep11-bg",
+    "bpm": 112,
+    "volume": 0.14
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Duzentas e catorze mensagens? Às sete da manhã?",
+      "gap": 1.2
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Chega. Vou sair do grupo.",
+      "gap": 2.8
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Paz. Finalmente, paz.",
+      "gap": 1.0
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Opa, foi mal! Te adicionei de volta sem querer!",
+      "gap": 1.2
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "SEM QUERER?!",
+      "gap": 0.3,
+      "tts": "Sem querer?!"
+    },
+    {
+      "id": "l6",
+      "speaker": "palito",
+      "text": "E ainda criei um grupo novo: Família 2!",
+      "gap": 0.4
+    },
+    {
+      "id": "l7",
+      "speaker": "bolota",
+      "text": "...Eu odeio bom dia.",
+      "gap": 1.6
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s0",
+      "type": "buzz",
+      "line": "l1",
+      "edge": "start",
+      "offset": -1.0
+    },
+    {
+      "id": "s1",
+      "type": "buzz",
+      "line": "l1",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s2",
+      "type": "buzz",
+      "line": "l1",
+      "edge": "end",
+      "offset": 0.2
+    },
+    {
+      "id": "s3",
+      "type": "buzz",
+      "line": "l1",
+      "edge": "end",
+      "offset": 0.7
+    },
+    {
+      "id": "s4",
+      "type": "buzz",
+      "line": "l1",
+      "edge": "end",
+      "offset": 1.2
+    },
+    {
+      "id": "s5",
+      "type": "buzz",
+      "line": "l1",
+      "edge": "end",
+      "offset": 1.7
+    },
+    {
+      "id": "s6",
+      "type": "pop",
+      "line": "l2",
+      "edge": "end",
+      "offset": 0.3
+    },
+    {
+      "id": "s7",
+      "type": "ding",
+      "line": "l3",
+      "edge": "start",
+      "offset": -0.2
+    },
+    {
+      "id": "s8",
+      "type": "whoosh",
+      "line": "l4",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s9",
+      "type": "pop",
+      "line": "l4",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s10",
+      "type": "boing",
+      "line": "l5",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s11",
+      "type": "buzz",
+      "line": "l6",
+      "edge": "end",
+      "offset": 0.2
+    },
+    {
+      "id": "s12",
+      "type": "buzz",
+      "line": "l6",
+      "edge": "end",
+      "offset": 0.5
+    },
+    {
+      "id": "s13",
+      "type": "buzz",
+      "line": "l6",
+      "edge": "end",
+      "offset": 0.8
+    },
+    {
+      "id": "s14",
+      "type": "boing",
+      "line": "l7",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

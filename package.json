@@ -28,6 +28,8 @@
     "thumb:ep09": "remotion still Ep09Thumb out/ep09-thumb.png",
     "render:ep10": "npm run audio && remotion render Ep10FelizSexta out/ep10-feliz-sexta.mp4",
     "thumb:ep10": "remotion still Ep10Thumb out/ep10-thumb.png",
+    "render:ep11": "npm run audio && remotion render Ep11GrupoFamilia out/ep11-grupo-familia.mp4",
+    "thumb:ep11": "remotion still Ep11Thumb out/ep11-thumb.png",
     "brand": "remotion still ProfilePicture out/brand/foto-perfil.png && remotion still ChannelBanner out/brand/banner.png && remotion still PromoPost out/brand/post-divulgacao.png"
   },
   "type": "module",

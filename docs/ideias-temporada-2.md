@@ -7,7 +7,7 @@ Mesma estrutura: **gancho (0–3 s) → conflito → Palito piora → virada →
 | 1 | **O Captcha** | "Só falta provar que não sou um robô." | Ele erra 7 vezes os semáforos. O Palito acerta de primeira… e o site diz: "Palito, você é um robô?" | Escritório + computador |
 | 2 | **Termos de Uso** | O app pede para aceitar 84 páginas de termos. | O Bolota lê tudo (time-lapse até a barba crescer). Cláusula final: "Ao ler, você aceita a assinatura anual." | Escritório |
 | 3 | **Entrega Prevista** | "Seu pedido chega entre 8h e 18h." | Ele não sai de casa o dia todo. Às 18:01: "Tentamos entregar, mas ninguém atendeu." O Palito estava com o pedido na mão o tempo todo. | Cozinha + notificação |
-| 4 | **O Grupo da Família** | O celular vibra 214 vezes. | Bom dia com flores, corrente, áudio da tia. O Bolota sai do grupo… e o Palito o adiciona de volta "sem querer". | Cozinha + notificações |
+| 4 | ✅ **O Grupo da Família** (EP11) | O celular vibra 214 vezes. | Bom dia com flores, corrente, áudio da tia. O Bolota sai do grupo… e o Palito o adiciona de volta "sem querer". | Cozinha + notificações |
 | 5 | **Fila do Banco** | Senha 001. Painel: chamando 847. | Time-lapse. Chamam o 001, ele corre… "Esse guichê só atende de 002 a 999." | Novo: agência |
 | 6 | **Modo Avião** | "Hoje: zero celular. Detox digital!" | Ele resiste 3 segundos. O Palito mostra um meme e o Bolota já está em 42 abas abertas. | Quarto |
 | 7 | **Carregador Emprestado** | O celular do Bolota está com 1%. | O Palito empresta o carregador… que é de outro modelo. Quando acha o certo: "Carregando lentamente". | Cozinha |

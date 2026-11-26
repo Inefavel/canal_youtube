@@ -11,6 +11,7 @@ import {Episode07, TIMELINE as EP07} from './episodes/ep07-boleto/Episode07';
 import {Episode08, TIMELINE as EP08} from './episodes/ep08-reuniao/Episode08';
 import {Episode09, TIMELINE as EP09} from './episodes/ep09-audio-5-minutos/Episode09';
 import {Episode10, TIMELINE as EP10} from './episodes/ep10-feliz-sexta/Episode10';
+import {Episode11, TIMELINE as EP11} from './episodes/ep11-grupo-familia/Episode11';
 import {BANNER, ChannelBanner} from './branding/ChannelBanner';
 import {PROFILE, ProfilePicture} from './branding/ProfilePicture';
 import {PROMO, PromoPost} from './branding/PromoPost';
@@ -59,6 +60,8 @@ export const RemotionRoot: React.FC = () => (
     <Still id="Ep09Thumb" component={Episode09} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
     <Composition id="Ep10FelizSexta" component={Episode10} durationInFrames={EP10.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
     <Still id="Ep10Thumb" component={Episode10} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep11GrupoFamilia" component={Episode11} durationInFrames={EP11.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep11Thumb" component={Episode11} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
     <Still id="ProfilePicture" component={ProfilePicture} width={PROFILE.width} height={PROFILE.height} />
     <Still id="PromoPost" component={PromoPost} width={PROMO.width} height={PROMO.height} />
     <Still id="ChannelBanner" component={ChannelBanner} defaultProps={{showSafeArea: false}} width={BANNER.width} height={BANNER.height} />

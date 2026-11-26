@@ -66,6 +66,7 @@ docs/            biblia-do-canal.md
 | 08 | Reunião que Podia Ser um E-mail | Escritório |
 | 09 | O Áudio de 5 Minutos | Cozinha |
 | 10 | Feliz Sexta-feira | Cozinha → Quarto |
+| 11 | O Grupo da Família (T2) | Cozinha |
 
 ## Vozes (ElevenLabs)
 As falas são geradas pela API da ElevenLabs com **tempo por caractere**, que alimenta o lip-sync e as legendas palavra a palavra.
