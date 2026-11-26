@@ -70,6 +70,12 @@ docs/            biblia-do-canal.md
 | 12 | O Captcha (T2) | Escritório |
 | 13 | Carregador Emprestado (T2) | Cozinha |
 | 14 | O Spoiler (T2) | Escritório |
+| 15 | Entrega Prevista (T2) | Cozinha |
+| 16 | Termos de Uso (T2) | Escritório |
+| 17 | Promoção Imperdível (T2) | Escritório |
+| 18 | Modo Avião (T2) | Quarto |
+| 19 | Fila do Banco (T2) | Agência bancária |
+| 20 | Senha do Cartão (T2, final) | Mercado |
 
 ## Vozes (ElevenLabs)
 As falas são geradas pela API da ElevenLabs com **tempo por caractere**, que alimenta o lip-sync e as legendas palavra a palavra.

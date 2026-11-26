@@ -186,6 +186,15 @@ const SFX = {
     }
     return b;
   },
+  applause: () => {
+    // palmas: muitos estalos curtos de ruído espalhados em ~2 s
+    const b = empty(2.2);
+    for (let i = 0; i < 70; i++) {
+      const t = ((i * 0.6180339) % 1) * 2.0;
+      addNoise(b, t, 0.03, 0.35 * (1 - t / 2.4), 100 + i);
+    }
+    return b;
+  },
   pop: () => {
     const b = empty(0.15);
     addTone(b, 0, 0.12, 600, 0.6, 'soft', -0.6);

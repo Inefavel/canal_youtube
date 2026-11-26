@@ -1,0 +1,111 @@
+{
+  "episode": "ep15",
+  "title": "Entrega Prevista",
+  "music": {
+    "id": "ep15-bg",
+    "bpm": 102,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Meu pedido chega hoje, entre oito e dezoito horas.",
+      "gap": 0.4
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Não saio de casa. Nem pra ir ao banheiro.",
+      "gap": 0.3
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Dezessete e cinquenta e nove... Vai chegar!",
+      "gap": 3.4
+    },
+    {
+      "id": "l4",
+      "speaker": "celular",
+      "text": "Tentamos entregar, mas ninguém atendeu.",
+      "gap": 0.6,
+      "offscreen": true
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "COMO ASSIM?! EU TÔ AQUI O DIA INTEIRO!",
+      "gap": 0.2,
+      "tts": "Como assim?! Eu tô aqui o dia inteiro!"
+    },
+    {
+      "id": "l6",
+      "speaker": "palito",
+      "text": "Bolota! Chegou essa caixa pra você. Peguei de manhã!",
+      "gap": 0.8
+    },
+    {
+      "id": "l7",
+      "speaker": "bolota",
+      "text": "De manhã?! E por que não me avisou?!",
+      "gap": 0.3
+    },
+    {
+      "id": "l8",
+      "speaker": "palito",
+      "text": "Eu avisei! Deixei um bilhete... dentro da caixa.",
+      "gap": 0.3
+    },
+    {
+      "id": "l9",
+      "speaker": "bolota",
+      "text": "...Eu odeio entrega.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "ding",
+      "line": "l3",
+      "edge": "start",
+      "offset": -0.2
+    },
+    {
+      "id": "s2",
+      "type": "buzz",
+      "line": "l4",
+      "edge": "start",
+      "offset": -0.7
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "line": "l5",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s4",
+      "type": "whoosh",
+      "line": "l6",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s5",
+      "type": "pop",
+      "line": "l8",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s6",
+      "type": "boing",
+      "line": "l9",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

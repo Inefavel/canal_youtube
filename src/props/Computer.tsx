@@ -10,7 +10,9 @@ export type ComputerScreen =
   | {kind: 'blocked'; flash: number}
   | {kind: 'call'; title: string; timer: string; tiles: {name: string; color: string; speaking: boolean; asleep?: boolean}[]}
   | {kind: 'captcha'; selected: number[]; status: 'pick' | 'wrong' | 'ok' | 'robot'; attempt: number}
-  | {kind: 'player'; title: string; subtitle: string; progress: number; paused: boolean; souffle: number};
+  | {kind: 'player'; title: string; subtitle: string; progress: number; paused: boolean; souffle: number}
+  | {kind: 'terms'; page: number; total: number; finalClause: boolean}
+  | {kind: 'shop'; discount: number; cart: number; color: string};
 
 /** Quadrados da grade do captcha que têm semáforo inteiro (true) ou só um pedacinho de poste ('pole'). */
 const CAPTCHA_TILES: (boolean | 'pole')[] = [true, false, false, false, true, true, false, true, 'pole'];
@@ -245,6 +247,45 @@ export const Computer: React.FC<ComputerProps> = ({x, y, screen, typed, cursorOn
       );
       break;
     }
+    case 'terms':
+      body = (
+        <>
+          <Header color="#57606F" title="TERMOS DE USO" />
+          <div style={{padding: '8px 16px', fontFamily: FONTS.body, fontSize: 22, color: '#57606F', display: 'flex', justifyContent: 'space-between'}}>
+            <span>Página {screen.page} de {screen.total}</span>
+            <span>{Math.round((screen.page / screen.total) * 100)}%</span>
+          </div>
+          {screen.finalClause ? (
+            <div style={{margin: '4px 16px', padding: '8px 12px', background: '#FFF3B0', border: `4px solid ${COLORS.danger}`, borderRadius: 8, fontFamily: FONTS.body, fontWeight: 700, fontSize: 24, lineHeight: 1.2, color: COLORS.ink}}>
+              Cláusula 847: ao ler esta cláusula, você aceita a assinatura anual.
+            </div>
+          ) : (
+            <div style={{padding: '4px 16px'}}>
+              {Array.from({length: 7}, (_, i) => (
+                // "texto" em barras cinza que rolam conforme a página muda
+                <div key={i} style={{height: 12, margin: '9px 0', borderRadius: 6, background: '#C8CED8', width: `${60 + ((i * 37 + screen.page * 13) % 38)}%`}} />
+              ))}
+            </div>
+          )}
+        </>
+      );
+      break;
+    case 'shop':
+      body = (
+        <>
+          <div style={{background: screen.color, color: '#fff', fontFamily: FONTS.display, fontSize: 64, textAlign: 'center', lineHeight: 1.15, padding: '10px 0'}}>{screen.discount}% OFF!</div>
+          <div style={{display: 'flex', gap: 12, padding: '14px 16px'}}>
+            {['#FF9F43', '#4FA3F7', '#1DD1A1', '#C56CF0'].map((c) => (
+              <div key={c} style={{flex: 1, height: 70, borderRadius: 10, background: c, border: `4px solid ${COLORS.ink}`}} />
+            ))}
+          </div>
+          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 16px', fontFamily: FONTS.display, fontSize: 30, color: COLORS.ink}}>
+            <span>Só hoje!</span>
+            <span style={{background: COLORS.ink, color: '#fff', borderRadius: 20, padding: '2px 16px'}}>Carrinho: {screen.cart}</span>
+          </div>
+        </>
+      );
+      break;
     default: {
       const exhaustive: never = screen;
       return exhaustive;

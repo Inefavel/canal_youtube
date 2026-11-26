@@ -1,0 +1,141 @@
+{
+  "episode": "ep20",
+  "title": "Senha do Cartão",
+  "music": {
+    "id": "ep20-bg",
+    "bpm": 100,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "maquina",
+      "text": "Digite sua senha.",
+      "gap": 0.4,
+      "offscreen": true
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Fácil. É o meu aniversário... ou o da minha mãe?",
+      "gap": 0.3
+    },
+    {
+      "id": "l3",
+      "speaker": "maquina",
+      "text": "Senha incorreta. Restam duas tentativas.",
+      "gap": 0.4,
+      "offscreen": true
+    },
+    {
+      "id": "l4",
+      "speaker": "bolota",
+      "text": "Então é o aniversário do cachorro!",
+      "gap": 0.3
+    },
+    {
+      "id": "l5",
+      "speaker": "maquina",
+      "text": "Senha incorreta. Cartão bloqueado.",
+      "gap": 0.4,
+      "offscreen": true
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "BLOQUEADO?! EU NEM TENHO CACHORRO!",
+      "gap": 0.2,
+      "tts": "Bloqueado?! Eu nem tenho cachorro!"
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "Deixa comigo! Paguei com o celular.",
+      "gap": 0.6
+    },
+    {
+      "id": "l8",
+      "speaker": "palito",
+      "text": "Senha do celular: um, dois, três, quatro!",
+      "gap": 0.8
+    },
+    {
+      "id": "l9",
+      "speaker": "bolota",
+      "text": "...Eu odeio senha.",
+      "gap": 0.8
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "beep",
+      "line": "l1",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "s2",
+      "type": "typing",
+      "line": "l2",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s3",
+      "type": "buzz",
+      "line": "l3",
+      "edge": "start",
+      "offset": -0.2
+    },
+    {
+      "id": "s4",
+      "type": "typing",
+      "line": "l4",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s5",
+      "type": "alarm",
+      "line": "l5",
+      "edge": "start",
+      "offset": -0.2
+    },
+    {
+      "id": "s6",
+      "type": "boing",
+      "line": "l6",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s7",
+      "type": "whoosh",
+      "line": "l7",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s8",
+      "type": "ding",
+      "line": "l7",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s9",
+      "type": "applause",
+      "line": "l7",
+      "edge": "end",
+      "offset": 0.3
+    },
+    {
+      "id": "s10",
+      "type": "boing",
+      "line": "l9",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

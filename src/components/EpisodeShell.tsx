@@ -87,6 +87,8 @@ export const SPEAKERS = {
     site: COLORS.bankBlue,
     celular: COLORS.danger,
     chefe: '#57606F',
+    painel: COLORS.clockDigits,
+    app: '#57606F',
   } as Record<string, string>,
   names: {
     bolota: 'BOLOTA',
@@ -95,5 +97,7 @@ export const SPEAKERS = {
     site: 'BANCO',
     celular: 'CELULAR',
     chefe: 'CHEFE',
+    painel: 'PAINEL',
+    app: 'APP',
   } as Record<string, string>,
 };

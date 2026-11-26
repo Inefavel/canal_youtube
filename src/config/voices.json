@@ -67,6 +67,28 @@
         "use_speaker_boost": true,
         "speed": 0.95
       }
+    },
+    "painel": {
+      "voice": "Daniel",
+      "voiceId": "onwK4e9ZLuTAKqWW03F9",
+      "settings": {
+        "stability": 0.9,
+        "similarity_boost": 0.7,
+        "style": 0.0,
+        "use_speaker_boost": false,
+        "speed": 1.05
+      }
+    },
+    "app": {
+      "voice": "Daniel",
+      "voiceId": "onwK4e9ZLuTAKqWW03F9",
+      "settings": {
+        "stability": 0.9,
+        "similarity_boost": 0.7,
+        "style": 0.0,
+        "use_speaker_boost": false,
+        "speed": 1.05
+      }
     }
   }
 }

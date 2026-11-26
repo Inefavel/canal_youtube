@@ -63,6 +63,15 @@ export const COLORS = {
   daySky: '#9AD8FF',
   clockDigits: '#FF4757',
 
+  // Cenário (agência bancária)
+  bankWall: '#E3F1EC',
+  bankStripe: '#2E5BFF',
+  bankCounter: '#8395A7',
+
+  // Cenário (mercado)
+  marketWall: '#FFF1D6',
+  cardboard: '#C69C6D',
+
   // Props (computador)
   monitor: '#2F3542',
   screenBg: '#F5F7FB',

@@ -1,0 +1,118 @@
+{
+  "episode": "ep17",
+  "title": "Promoção Imperdível",
+  "music": {
+    "id": "ep17-bg",
+    "bpm": 112,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Cinquenta por cento de desconto! Só hoje!",
+      "gap": 0.4
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Compra! Compra! Compra tudo!",
+      "gap": 0.3
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Pronto. Economizei muito ontem.",
+      "gap": 2.4
+    },
+    {
+      "id": "l4",
+      "speaker": "bolota",
+      "text": "SETENTA POR CENTO?!",
+      "gap": 0.5,
+      "tts": "Setenta por cento?!"
+    },
+    {
+      "id": "l5",
+      "speaker": "palito",
+      "text": "Eu comprei igualzinho! Com noventa por cento.",
+      "gap": 0.8
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "Noventa?! Como?!",
+      "gap": 0.3
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "Usei o cupom que chegou no seu e-mail.",
+      "gap": 0.4
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio promoção.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "click",
+      "line": "l2",
+      "edge": "start",
+      "offset": 0.2
+    },
+    {
+      "id": "s2",
+      "type": "click",
+      "line": "l2",
+      "edge": "start",
+      "offset": 0.6
+    },
+    {
+      "id": "s3",
+      "type": "click",
+      "line": "l2",
+      "edge": "start",
+      "offset": 1.0
+    },
+    {
+      "id": "s4",
+      "type": "ding",
+      "line": "l2",
+      "edge": "end",
+      "offset": 0.2
+    },
+    {
+      "id": "s5",
+      "type": "whoosh",
+      "line": "l3",
+      "edge": "start",
+      "offset": -1.6
+    },
+    {
+      "id": "s6",
+      "type": "boing",
+      "line": "l4",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s7",
+      "type": "whoosh",
+      "line": "l5",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s8",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "episode": "ep16",
+  "title": "Termos de Uso",
+  "music": {
+    "id": "ep16-bg",
+    "bpm": 92,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Pra usar o aplicativo, é só aceitar os termos.",
+      "gap": 0.4
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Oitenta e quatro páginas. Eu vou ler tudo.",
+      "gap": 0.3
+    },
+    {
+      "id": "l3",
+      "speaker": "palito",
+      "text": "Bolota, você ainda tá lendo isso? Já é madrugada!",
+      "gap": 3.6
+    },
+    {
+      "id": "l4",
+      "speaker": "bolota",
+      "text": "Última cláusula, Palito. Escuta essa:",
+      "gap": 0.4
+    },
+    {
+      "id": "l5",
+      "speaker": "app",
+      "text": "Ao ler esta cláusula, você aceita a assinatura anual.",
+      "gap": 0.3,
+      "offscreen": true
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "QUÊ?! EU SÓ LI!",
+      "gap": 0.2,
+      "tts": "Quê?! Eu só li!"
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "Eu aceitei sem ler. Pra mim saiu de graça!",
+      "gap": 0.7
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio letra miúda.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "typing",
+      "line": "l2",
+      "edge": "end",
+      "offset": 0.3
+    },
+    {
+      "id": "s2",
+      "type": "whoosh",
+      "line": "l3",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s3",
+      "type": "ding",
+      "line": "l5",
+      "edge": "start",
+      "offset": -0.2
+    },
+    {
+      "id": "s4",
+      "type": "boing",
+      "line": "l6",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s5",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

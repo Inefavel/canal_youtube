@@ -1,0 +1,112 @@
+{
+  "episode": "ep19",
+  "title": "Fila do Banco",
+  "music": {
+    "id": "ep19-bg",
+    "bpm": 88,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Senha zero zero um. Vai ser rapidinho.",
+      "gap": 0.4
+    },
+    {
+      "id": "l2",
+      "speaker": "painel",
+      "text": "Senha oitocentos e quarenta e sete.",
+      "gap": 0.3,
+      "offscreen": true
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Oitocentos e quarenta e sete?! Eu sou o um!",
+      "gap": 0.3
+    },
+    {
+      "id": "l4",
+      "speaker": "painel",
+      "text": "Senha zero zero um. Guichê cinco.",
+      "gap": 3.6,
+      "offscreen": true
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "SOU EU! FINALMENTE!",
+      "gap": 0.2,
+      "tts": "Sou eu! Finalmente!"
+    },
+    {
+      "id": "l6",
+      "speaker": "palito",
+      "text": "Bom dia! Esse guichê só atende de dois a novecentos e noventa e nove.",
+      "gap": 0.6
+    },
+    {
+      "id": "l7",
+      "speaker": "bolota",
+      "text": "Palito?! Você trabalha aqui?!",
+      "gap": 0.3
+    },
+    {
+      "id": "l8",
+      "speaker": "palito",
+      "text": "Desde hoje! Pega outra senha, por favor.",
+      "gap": 0.3
+    },
+    {
+      "id": "l9",
+      "speaker": "bolota",
+      "text": "...Eu odeio banco.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "ding",
+      "line": "l2",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "s2",
+      "type": "boing",
+      "line": "l3",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s3",
+      "type": "ding",
+      "line": "l4",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "s4",
+      "type": "whoosh",
+      "line": "l6",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s5",
+      "type": "boing",
+      "line": "l7",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s6",
+      "type": "boing",
+      "line": "l9",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}
