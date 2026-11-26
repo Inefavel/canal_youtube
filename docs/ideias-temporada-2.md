@@ -4,7 +4,7 @@ Mesma estrutura: **gancho (0–3 s) → conflito → Palito piora → virada →
 
 | # | Título | Gancho | Virada / punchline | Cenário |
 |---|---|---|---|---|
-| 1 | **O Captcha** | "Só falta provar que não sou um robô." | Ele erra 7 vezes os semáforos. O Palito acerta de primeira… e o site diz: "Palito, você é um robô?" | Escritório + computador |
+| 1 | ✅ **O Captcha** (EP12) | "Só falta provar que não sou um robô." | Ele erra 7 vezes os semáforos. O Palito acerta de primeira… e o site diz: "Palito, você é um robô?" | Escritório + computador |
 | 2 | **Termos de Uso** | O app pede para aceitar 84 páginas de termos. | O Bolota lê tudo (time-lapse até a barba crescer). Cláusula final: "Ao ler, você aceita a assinatura anual." | Escritório |
 | 3 | **Entrega Prevista** | "Seu pedido chega entre 8h e 18h." | Ele não sai de casa o dia todo. Às 18:01: "Tentamos entregar, mas ninguém atendeu." O Palito estava com o pedido na mão o tempo todo. | Cozinha + notificação |
 | 4 | ✅ **O Grupo da Família** (EP11) | O celular vibra 214 vezes. | Bom dia com flores, corrente, áudio da tia. O Bolota sai do grupo… e o Palito o adiciona de volta "sem querer". | Cozinha + notificações |

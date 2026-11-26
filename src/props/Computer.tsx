@@ -8,7 +8,25 @@ export type ComputerScreen =
   | {kind: 'rules'; rules: PasswordRule[]}
   | {kind: 'accepted'}
   | {kind: 'blocked'; flash: number}
-  | {kind: 'call'; title: string; timer: string; tiles: {name: string; color: string; speaking: boolean; asleep?: boolean}[]};
+  | {kind: 'call'; title: string; timer: string; tiles: {name: string; color: string; speaking: boolean; asleep?: boolean}[]}
+  | {kind: 'captcha'; selected: number[]; status: 'pick' | 'wrong' | 'ok' | 'robot'; attempt: number};
+
+/** Quadrados da grade do captcha que têm semáforo inteiro (true) ou só um pedacinho de poste ('pole'). */
+const CAPTCHA_TILES: (boolean | 'pole')[] = [true, false, false, false, true, true, false, true, 'pole'];
+
+const TrafficLight: React.FC<{partial?: boolean}> = ({partial = false}) => (
+  <svg width="100%" height="100%" viewBox="0 0 60 60">
+    <rect x={27} y={partial ? 0 : 30} width={6} height={partial ? 60 : 30} fill="#57606F" />
+    {partial ? null : (
+      <>
+        <rect x={19} y={4} width={22} height={34} rx={5} fill="#2F3542" />
+        <circle cx={30} cy={11} r={4} fill="#FF4757" />
+        <circle cx={30} cy={21} r={4} fill="#FFA502" />
+        <circle cx={30} cy={31} r={4} fill="#2ED573" />
+      </>
+    )}
+  </svg>
+);
 
 type ComputerProps = {
   /** Base (centro) do monitor, apoiada na mesa. */
@@ -142,6 +160,60 @@ export const Computer: React.FC<ComputerProps> = ({x, y, screen, typed, cursorOn
           </div>
         </div>
       );
+      break;
+    case 'captcha':
+      body =
+        screen.status === 'robot' ? (
+          <div style={{height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: COLORS.danger, color: '#fff', fontFamily: FONTS.display, textAlign: 'center'}}>
+            <div style={{fontSize: 80, lineHeight: 1}}>⚠</div>
+            <div style={{fontSize: 44, lineHeight: 1.05}}>ROBÔ</div>
+            <div style={{fontSize: 44, lineHeight: 1.05}}>DETECTADO</div>
+            <div style={{fontFamily: FONTS.body, fontSize: 24, marginTop: 8}}>Acesso bloqueado</div>
+          </div>
+        ) : (
+          <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
+            <div style={{background: COLORS.bankBlue, color: '#fff', fontFamily: FONTS.display, fontSize: 24, padding: '8px 14px', lineHeight: 1.1}}>
+              Selecione todos os
+              <br />
+              SEMÁFOROS
+            </div>
+            <div style={{flex: 1, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 5, padding: 8, background: '#DFE4EA'}}>
+              {CAPTCHA_TILES.map((t, i) => {
+                const sel = screen.selected.includes(i);
+                return (
+                  <div
+                    key={i}
+                    style={{
+                      position: 'relative',
+                      background: t ? '#9AD8FF' : i % 2 === 0 ? '#A4B0BE' : '#CED6E0',
+                      border: sel ? `5px solid ${COLORS.bankBlue}` : '5px solid transparent',
+                      transform: sel ? 'scale(0.9)' : 'none',
+                    }}
+                  >
+                    {t ? <TrafficLight partial={t === 'pole'} /> : null}
+                    {sel ? (
+                      <div style={{position: 'absolute', left: -4, top: -4, width: 26, height: 26, borderRadius: 13, background: COLORS.bankBlue, color: '#fff', fontSize: 18, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: FONTS.display}}>
+                        ✓
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              })}
+            </div>
+            <div
+              style={{
+                fontFamily: FONTS.display,
+                fontSize: 22,
+                padding: '6px 12px',
+                textAlign: 'center',
+                color: '#fff',
+                background: screen.status === 'wrong' ? COLORS.danger : screen.status === 'ok' ? COLORS.ok : '#57606F',
+              }}
+            >
+              {screen.status === 'wrong' ? `✗ Tente novamente (${screen.attempt})` : screen.status === 'ok' ? '✓ Verificado em 0,2 s' : 'Não sou um robô'}
+            </div>
+          </div>
+        );
       break;
     default: {
       const exhaustive: never = screen;

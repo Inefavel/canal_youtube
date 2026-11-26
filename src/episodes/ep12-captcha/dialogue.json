@@ -1,0 +1,162 @@
+{
+  "episode": "ep12",
+  "title": "O Captcha",
+  "music": {
+    "id": "ep12-bg",
+    "bpm": 118,
+    "volume": 0.14
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Só falta provar que não sou um robô. Fácil.",
+      "gap": 0.3
+    },
+    {
+      "id": "l2",
+      "speaker": "site",
+      "text": "Selecione todos os semáforos.",
+      "gap": 0.6,
+      "offscreen": true
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Esse pedacinho de poste conta ou não conta?!",
+      "gap": 3.8
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Deixa comigo!",
+      "gap": 0.9
+    },
+    {
+      "id": "l5",
+      "speaker": "site",
+      "text": "Verificado em zero vírgula dois segundos.",
+      "gap": 1.0,
+      "offscreen": true
+    },
+    {
+      "id": "l6",
+      "speaker": "site",
+      "text": "Humanos não são tão rápidos. Acesso bloqueado para robôs.",
+      "gap": 0.3,
+      "offscreen": true
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "Eita. Será que eu sou um robô?",
+      "gap": 0.4
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Isso explica muita coisa.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "pop",
+      "line": "l2",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "f0",
+      "type": "buzz",
+      "line": "l2",
+      "edge": "end",
+      "offset": 0.7
+    },
+    {
+      "id": "f1",
+      "type": "buzz",
+      "line": "l2",
+      "edge": "end",
+      "offset": 1.15
+    },
+    {
+      "id": "f2",
+      "type": "buzz",
+      "line": "l2",
+      "edge": "end",
+      "offset": 1.6
+    },
+    {
+      "id": "f3",
+      "type": "buzz",
+      "line": "l2",
+      "edge": "end",
+      "offset": 2.0500000000000003
+    },
+    {
+      "id": "f4",
+      "type": "buzz",
+      "line": "l2",
+      "edge": "end",
+      "offset": 2.5
+    },
+    {
+      "id": "f5",
+      "type": "buzz",
+      "line": "l2",
+      "edge": "end",
+      "offset": 2.9499999999999997
+    },
+    {
+      "id": "f6",
+      "type": "buzz",
+      "line": "l2",
+      "edge": "end",
+      "offset": 3.4
+    },
+    {
+      "id": "s2",
+      "type": "boing",
+      "line": "l3",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s3",
+      "type": "whoosh",
+      "line": "l4",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s4",
+      "type": "click",
+      "line": "l4",
+      "edge": "end",
+      "offset": 0.3
+    },
+    {
+      "id": "s5",
+      "type": "ding",
+      "line": "l5",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "s6",
+      "type": "alarm",
+      "line": "l6",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s7",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}
