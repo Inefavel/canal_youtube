@@ -12,7 +12,7 @@
 
 ## Descrição (SEO)
 ```
-O Bolota esperou a entrega das 8h às 18h sem sair de casa. Às 18:01: "ninguém atendeu". 📦😩 E o pior: o pedido estava com o Palito desde de manhã.
+O Bolota esperou a entrega das 8h às 18h sem sair de casa. Às 18:01: "ninguém atendeu". 📦😩 E o pior: o pedido estava com o Palito desde a manhã.
 
 Já aconteceu com você? Conta nos comentários!
 
