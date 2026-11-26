@@ -1,0 +1,97 @@
+{
+  "episode": "ep14",
+  "title": "O Spoiler",
+  "music": {
+    "id": "ep14-bg",
+    "bpm": 96,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Hoje eu finalmente assisto o episódio final. Sem spoiler!",
+      "gap": 0.3
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Celular no silencioso. Ninguém vai estragar isso.",
+      "gap": 0.6
+    },
+    {
+      "id": "l3",
+      "speaker": "palito",
+      "text": "Bolota! Você viu? Que final quando ele morre, hein?!",
+      "gap": 1.0
+    },
+    {
+      "id": "l4",
+      "speaker": "bolota",
+      "text": "VOCÊ... O QUÊ?!",
+      "gap": 0.2,
+      "tts": "Você... o quê?!"
+    },
+    {
+      "id": "l5",
+      "speaker": "palito",
+      "text": "O suflê! Ele murcha no forno! Eu chorei.",
+      "gap": 0.5
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "É um programa de culinária, Palito.",
+      "gap": 0.8
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "E o suflê era o protagonista!",
+      "gap": 0.3
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio spoiler.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s1",
+      "type": "click",
+      "line": "l2",
+      "edge": "end",
+      "offset": 0.2
+    },
+    {
+      "id": "s2",
+      "type": "whoosh",
+      "line": "l3",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "line": "l4",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s4",
+      "type": "pop",
+      "line": "l5",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s5",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

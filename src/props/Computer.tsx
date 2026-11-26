@@ -9,7 +9,8 @@ export type ComputerScreen =
   | {kind: 'accepted'}
   | {kind: 'blocked'; flash: number}
   | {kind: 'call'; title: string; timer: string; tiles: {name: string; color: string; speaking: boolean; asleep?: boolean}[]}
-  | {kind: 'captcha'; selected: number[]; status: 'pick' | 'wrong' | 'ok' | 'robot'; attempt: number};
+  | {kind: 'captcha'; selected: number[]; status: 'pick' | 'wrong' | 'ok' | 'robot'; attempt: number}
+  | {kind: 'player'; title: string; subtitle: string; progress: number; paused: boolean; souffle: number};
 
 /** Quadrados da grade do captcha que têm semáforo inteiro (true) ou só um pedacinho de poste ('pole'). */
 const CAPTCHA_TILES: (boolean | 'pole')[] = [true, false, false, false, true, true, false, true, 'pole'];
@@ -215,6 +216,35 @@ export const Computer: React.FC<ComputerProps> = ({x, y, screen, typed, cursorOn
           </div>
         );
       break;
+    case 'player': {
+      // suflê: 1 = alto e dourado, 0 = murcho
+      const h = 40 + 60 * screen.souffle;
+      body = (
+        <div style={{height: '100%', background: '#111', display: 'flex', flexDirection: 'column'}}>
+          <div style={{flex: 1, position: 'relative', background: 'linear-gradient(#3B2F2F, #1B1B1B)'}}>
+            <svg width="100%" height="100%" viewBox="0 0 536 280" style={{position: 'absolute'}}>
+              <rect x={168} y={150} width={200} height={110} rx={14} fill="#F1F2F6" stroke="#000" strokeWidth={6} />
+              <ellipse cx={268} cy={150 - h / 2 + 10} rx={95} ry={h / 2 + 4} fill="#F7C873" stroke="#000" strokeWidth={6} />
+              <rect x={168} y={150} width={200} height={20} fill="#F1F2F6" />
+              {screen.paused ? (
+                <g>
+                  <circle cx={268} cy={110} r={46} fill="rgba(0,0,0,0.55)" />
+                  <path d="M 252 86 L 252 134 L 292 110 Z" fill="#fff" />
+                </g>
+              ) : null}
+            </svg>
+            <div style={{position: 'absolute', left: 14, top: 10, color: '#fff', fontFamily: FONTS.display, fontSize: 26, lineHeight: 1.1}}>
+              {screen.title}
+              <div style={{fontFamily: FONTS.body, fontSize: 18, opacity: 0.8}}>{screen.subtitle}</div>
+            </div>
+          </div>
+          <div style={{height: 14, background: '#444', margin: '10px 14px'}}>
+            <div style={{width: `${Math.round(screen.progress * 100)}%`, height: '100%', background: COLORS.danger}} />
+          </div>
+        </div>
+      );
+      break;
+    }
     default: {
       const exhaustive: never = screen;
       return exhaustive;

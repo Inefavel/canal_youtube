@@ -1,0 +1,139 @@
+{
+  "episode": "ep13",
+  "title": "Carregador Emprestado",
+  "music": {
+    "id": "ep13-bg",
+    "bpm": 106,
+    "volume": 0.14
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "Um por cento. Alguém tem um carregador?",
+      "gap": 0.4
+    },
+    {
+      "id": "l2",
+      "speaker": "palito",
+      "text": "Eu tenho! Toma, pode usar.",
+      "gap": 0.6
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Palito... isso é de outro modelo.",
+      "gap": 1.4
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Calma, tenho mais! Esse? Esse? Esse aqui?",
+      "gap": 0.4
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "Esse serve! Finalmente!",
+      "gap": 1.6
+    },
+    {
+      "id": "l6",
+      "speaker": "celular",
+      "text": "Carregando lentamente. Tempo para carga completa: nove horas.",
+      "gap": 0.8,
+      "offscreen": true
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "Mas pelo menos tá carregando!",
+      "gap": 0.4
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio um por cento.",
+      "gap": 1.0
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s0",
+      "type": "beep",
+      "line": "l1",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s1",
+      "type": "whoosh",
+      "line": "l2",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s2",
+      "type": "pop",
+      "line": "l2",
+      "edge": "end",
+      "offset": 0.2
+    },
+    {
+      "id": "s3",
+      "type": "buzz",
+      "line": "l3",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s4",
+      "type": "boing",
+      "line": "l3",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s5",
+      "type": "pop",
+      "line": "l4",
+      "edge": "start",
+      "offset": 0.9
+    },
+    {
+      "id": "s6",
+      "type": "pop",
+      "line": "l4",
+      "edge": "start",
+      "offset": 1.5
+    },
+    {
+      "id": "s7",
+      "type": "pop",
+      "line": "l4",
+      "edge": "start",
+      "offset": 2.2
+    },
+    {
+      "id": "s8",
+      "type": "ding",
+      "line": "l5",
+      "edge": "start",
+      "offset": -0.4
+    },
+    {
+      "id": "s9",
+      "type": "buzz",
+      "line": "l6",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "s10",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    }
+  ]
+}

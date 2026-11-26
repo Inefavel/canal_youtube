@@ -68,6 +68,8 @@ docs/            biblia-do-canal.md
 | 10 | Feliz Sexta-feira | Cozinha → Quarto |
 | 11 | O Grupo da Família (T2) | Cozinha |
 | 12 | O Captcha (T2) | Escritório |
+| 13 | Carregador Emprestado (T2) | Cozinha |
+| 14 | O Spoiler (T2) | Escritório |
 
 ## Vozes (ElevenLabs)
 As falas são geradas pela API da ElevenLabs com **tempo por caractere**, que alimenta o lip-sync e as legendas palavra a palavra.

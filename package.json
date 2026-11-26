@@ -32,6 +32,10 @@
     "thumb:ep11": "remotion still Ep11Thumb out/ep11-thumb.png",
     "render:ep12": "npm run audio && remotion render Ep12Captcha out/ep12-captcha.mp4",
     "thumb:ep12": "remotion still Ep12Thumb out/ep12-thumb.png",
+    "render:ep13": "npm run audio && remotion render Ep13Carregador out/ep13-carregador.mp4",
+    "thumb:ep13": "remotion still Ep13Thumb out/ep13-thumb.png",
+    "render:ep14": "npm run audio && remotion render Ep14Spoiler out/ep14-spoiler.mp4",
+    "thumb:ep14": "remotion still Ep14Thumb out/ep14-thumb.png",
     "brand": "remotion still ProfilePicture out/brand/foto-perfil.png && remotion still ChannelBanner out/brand/banner.png && remotion still PromoPost out/brand/post-divulgacao.png"
   },
   "type": "module",

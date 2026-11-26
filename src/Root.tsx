@@ -13,6 +13,8 @@ import {Episode09, TIMELINE as EP09} from './episodes/ep09-audio-5-minutos/Episo
 import {Episode10, TIMELINE as EP10} from './episodes/ep10-feliz-sexta/Episode10';
 import {Episode11, TIMELINE as EP11} from './episodes/ep11-grupo-familia/Episode11';
 import {Episode12, TIMELINE as EP12} from './episodes/ep12-captcha/Episode12';
+import {Episode13, TIMELINE as EP13} from './episodes/ep13-carregador/Episode13';
+import {Episode14, TIMELINE as EP14} from './episodes/ep14-spoiler/Episode14';
 import {BANNER, ChannelBanner} from './branding/ChannelBanner';
 import {PROFILE, ProfilePicture} from './branding/ProfilePicture';
 import {PROMO, PromoPost} from './branding/PromoPost';
@@ -65,6 +67,10 @@ export const RemotionRoot: React.FC = () => (
     <Still id="Ep11Thumb" component={Episode11} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
     <Composition id="Ep12Captcha" component={Episode12} durationInFrames={EP12.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
     <Still id="Ep12Thumb" component={Episode12} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep13Carregador" component={Episode13} durationInFrames={EP13.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep13Thumb" component={Episode13} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep14Spoiler" component={Episode14} durationInFrames={EP14.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep14Thumb" component={Episode14} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
     <Still id="ProfilePicture" component={ProfilePicture} width={PROFILE.width} height={PROFILE.height} />
     <Still id="PromoPost" component={PromoPost} width={PROMO.width} height={PROMO.height} />
     <Still id="ChannelBanner" component={ChannelBanner} defaultProps={{showSafeArea: false}} width={BANNER.width} height={BANNER.height} />
