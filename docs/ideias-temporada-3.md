@@ -20,7 +20,7 @@ Base: as duas recomendações do vidIQ.
 
 | # | Título | 0–1 s (imagem + som) | Conflito → virada | Pergunta para os comentários | Cenário |
 |---|---|---|---|---|---|
-| 21 | **Conta de Luz** | Cartão "CONTA DE LUZ: R$ 847" + alarme. Bolota: "OITOCENTOS REAIS?!" | Ele desliga tudo, até a geladeira. Descobre que o Palito deixou o ar-condicionado ligado "pro gato", e eles nem têm gato. | "Qual foi a conta mais absurda que já chegou pra você?" | Cozinha |
+| 21 | ✅ **Conta de Luz** (EP21) | Cartão "CONTA DE LUZ: R$ 847" + alarme. Bolota: "OITOCENTOS REAIS?!" | Ele desliga tudo, até a geladeira. Descobre que o Palito deixou o ar-condicionado ligado "pro gato", e eles nem têm gato. | "Qual foi a conta mais absurda que já chegou pra você?" | Cozinha |
 | 22 | **Senha do Wi-Fi do Vizinho** | Tela "Wi-Fi: 0 redes" + buzz. "SEM INTERNET?!" | Ele tenta 30 senhas na rede do vizinho. Era "palito123": o vizinho é o Palito. | "Você já pediu a senha do Wi-Fi do vizinho? 1 = sim, 2 = nunca" | Escritório |
 | 23 | **A Balança** | Balança grita "ERRO" + boing logo no primeiro quadro. | Ele tira o relógio, os sapatos, a meia, prende a respiração... A balança: "Uma pessoa por vez." Era o Palito apoiando o pé. | "Qual é a sua desculpa favorita na balança?" | Quarto |
 | 24 | **Reunião que Podia Ser um E-mail** | Tela "Reunião: 3 h 12 min" + alarme. | Uma reunião de 3 horas para decidir a cor de um botão. No fim, o chefe: "Vamos marcar outra para alinhar." | "Quanto tempo durou a sua pior reunião?" | Escritório |

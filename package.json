@@ -48,6 +48,8 @@
     "thumb:ep19": "remotion still Ep19Thumb out/ep19-thumb.png",
     "render:ep20": "npm run audio && remotion render Ep20SenhaCartao out/ep20-senha-cartao.mp4",
     "thumb:ep20": "remotion still Ep20Thumb out/ep20-thumb.png",
+    "render:ep21": "npm run audio && remotion render Ep21ContaDeLuz out/ep21-conta-de-luz.mp4",
+    "thumb:ep21": "remotion still Ep21Thumb out/ep21-thumb.png",
     "brand": "remotion still ProfilePicture out/brand/foto-perfil.png && remotion still ChannelBanner out/brand/banner.png && remotion still PromoPost out/brand/post-divulgacao.png"
   },
   "type": "module",

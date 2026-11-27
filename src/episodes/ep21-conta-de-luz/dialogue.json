@@ -1,0 +1,130 @@
+{
+  "episode": "ep21",
+  "title": "Conta de Luz",
+  "tail": 3.2,
+  "music": {
+    "id": "ep21-bg",
+    "bpm": 104,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "OITOCENTOS E QUARENTA E SETE?!",
+      "start": 0.15,
+      "tts": "Oitocentos e quarenta e sete?!"
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Pronto. A partir de hoje, economia total.",
+      "gap": 0.5
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Desliga a TV. Desliga a luz. Desliga a geladeira!",
+      "gap": 0.3
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Bolota, por que tá tudo escuro?",
+      "gap": 0.9
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "Economia! E você, gastou com o quê?",
+      "gap": 0.3
+    },
+    {
+      "id": "l6",
+      "speaker": "palito",
+      "text": "Só deixo o ar-condicionado ligado pro gato.",
+      "gap": 0.4
+    },
+    {
+      "id": "l7",
+      "speaker": "bolota",
+      "text": "Palito... a gente não tem gato.",
+      "gap": 0.8
+    },
+    {
+      "id": "l8",
+      "speaker": "palito",
+      "text": "Pois é! Mas se um dia tiver, vai estar fresquinho.",
+      "gap": 0.4
+    },
+    {
+      "id": "l9",
+      "speaker": "bolota",
+      "text": "...Eu odeio conta de luz.",
+      "gap": 0.8
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s0",
+      "type": "alarm",
+      "at": 0.0
+    },
+    {
+      "id": "s1",
+      "type": "click",
+      "line": "l3",
+      "edge": "start",
+      "offset": 0.75
+    },
+    {
+      "id": "s2",
+      "type": "click",
+      "line": "l3",
+      "edge": "start",
+      "offset": 2.28
+    },
+    {
+      "id": "s3",
+      "type": "click",
+      "line": "l3",
+      "edge": "start",
+      "offset": 3.98
+    },
+    {
+      "id": "s4",
+      "type": "whoosh",
+      "line": "l4",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s5",
+      "type": "whoosh",
+      "line": "l6",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s6",
+      "type": "boing",
+      "line": "l7",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s7",
+      "type": "boing",
+      "line": "l9",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s8",
+      "type": "pop",
+      "line": "l9",
+      "edge": "end",
+      "offset": 0.3
+    }
+  ]
+}

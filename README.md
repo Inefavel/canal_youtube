@@ -76,6 +76,7 @@ docs/            biblia-do-canal.md
 | 18 | Modo Avião (T2) | Quarto |
 | 19 | Fila do Banco (T2) | Agência bancária |
 | 20 | Senha do Cartão (T2, final) | Mercado |
+| 21 | Conta de Luz (T3) | Cozinha |
 
 ## Vozes (ElevenLabs)
 As falas são geradas pela API da ElevenLabs com **tempo por caractere**, que alimenta o lip-sync e as legendas palavra a palavra.
