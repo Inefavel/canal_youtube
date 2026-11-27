@@ -1,0 +1,104 @@
+{
+  "episode": "ep27",
+  "title": "Autoatendimento",
+  "tail": 3.2,
+  "music": {
+    "id": "ep27-bg",
+    "bpm": 104,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "maquina",
+      "text": "Item inesperado na área de ensacamento.",
+      "start": 0.15,
+      "offscreen": true
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "É uma banana! Só uma banana!",
+      "gap": 0.3
+    },
+    {
+      "id": "l3",
+      "speaker": "maquina",
+      "text": "Item inesperado na área de ensacamento.",
+      "gap": 0.4,
+      "offscreen": true
+    },
+    {
+      "id": "l4",
+      "speaker": "bolota",
+      "text": "Eu nem coloquei nada!",
+      "gap": 0.3
+    },
+    {
+      "id": "l5",
+      "speaker": "palito",
+      "text": "Pois não? Sou o atendente.",
+      "gap": 0.6
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "Palito?! Você trabalha aqui também?!",
+      "gap": 0.3
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "Senhor, isso na balança é a sua mochila.",
+      "gap": 0.4
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio autoatendimento.",
+      "gap": 0.8
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s0",
+      "type": "alarm",
+      "at": 0.0
+    },
+    {
+      "id": "s1",
+      "type": "alarm",
+      "line": "l3",
+      "edge": "start",
+      "offset": -0.2
+    },
+    {
+      "id": "s2",
+      "type": "whoosh",
+      "line": "l5",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "line": "l6",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s4",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s5",
+      "type": "pop",
+      "line": "l8",
+      "edge": "end",
+      "offset": 0.3
+    }
+  ]
+}

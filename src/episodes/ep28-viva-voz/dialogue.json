@@ -1,0 +1,94 @@
+{
+  "episode": "ep28",
+  "title": "Áudio no Viva-Voz",
+  "tail": 3.2,
+  "music": {
+    "id": "ep28-bg",
+    "bpm": 100,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "palito",
+      "text": "E aí o Bolota falou que o chefe...",
+      "start": 0.15,
+      "offscreen": true
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Não, não, não! Para esse áudio!",
+      "gap": 0.2
+    },
+    {
+      "id": "l3",
+      "speaker": "palito",
+      "text": "...ronca nas reuniões! Muito alto!",
+      "gap": 0.2,
+      "offscreen": true,
+      "rate": 1.0
+    },
+    {
+      "id": "l4",
+      "speaker": "bolota",
+      "text": "Pronto, parei. Ninguém ouviu.",
+      "gap": 0.4
+    },
+    {
+      "id": "l5",
+      "speaker": "chefe",
+      "text": "Bom dia, Bolota.",
+      "gap": 0.8,
+      "offscreen": true
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "...Eu odeio viva-voz.",
+      "gap": 0.8
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s0",
+      "type": "pop",
+      "at": 0.0
+    },
+    {
+      "id": "s1",
+      "type": "click",
+      "line": "l2",
+      "edge": "end",
+      "offset": -0.2
+    },
+    {
+      "id": "s2",
+      "type": "click",
+      "line": "l4",
+      "edge": "start",
+      "offset": -0.2
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "line": "l5",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s4",
+      "type": "boing",
+      "line": "l6",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s5",
+      "type": "pop",
+      "line": "l6",
+      "edge": "end",
+      "offset": 0.3
+    }
+  ]
+}

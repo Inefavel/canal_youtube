@@ -72,6 +72,10 @@ export const COLORS = {
   marketWall: '#FFF1D6',
   cardboard: '#C69C6D',
 
+  // Cenário (ônibus)
+  busWall: '#F1F2F6',
+  busSeat: '#2E86DE',
+
   // Props (computador)
   monitor: '#2F3542',
   screenBg: '#F5F7FB',

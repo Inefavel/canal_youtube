@@ -1,0 +1,106 @@
+{
+  "episode": "ep26",
+  "title": "Atualização do Celular",
+  "tail": 3.2,
+  "music": {
+    "id": "ep26-bg",
+    "bpm": 98,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "CENTO E QUARENTA E SETE POR CENTO?!",
+      "tts": "Cento e quarenta e sete por cento?!",
+      "start": 0.15
+    },
+    {
+      "id": "l2",
+      "speaker": "celular",
+      "text": "Reiniciando. Não desligue o aparelho.",
+      "gap": 0.4,
+      "offscreen": true
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Já reiniciou nove vezes!",
+      "gap": 0.3
+    },
+    {
+      "id": "l4",
+      "speaker": "celular",
+      "text": "Concluído. Novidade: removemos o botão de voltar.",
+      "gap": 1.2,
+      "offscreen": true
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "Era o único botão que eu usava!",
+      "gap": 0.2
+    },
+    {
+      "id": "l6",
+      "speaker": "palito",
+      "text": "Calma! Agora tem trinta emojis novos!",
+      "gap": 0.6
+    },
+    {
+      "id": "l7",
+      "speaker": "bolota",
+      "text": "...Eu odeio atualização.",
+      "gap": 0.8
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s0",
+      "type": "buzz",
+      "at": 0.0
+    },
+    {
+      "id": "s1",
+      "type": "beep",
+      "line": "l2",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "s2",
+      "type": "ding",
+      "line": "l4",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "line": "l5",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s4",
+      "type": "whoosh",
+      "line": "l6",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s5",
+      "type": "boing",
+      "line": "l7",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s6",
+      "type": "pop",
+      "line": "l7",
+      "edge": "end",
+      "offset": 0.3
+    }
+  ]
+}

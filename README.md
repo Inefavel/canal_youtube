@@ -77,6 +77,15 @@ docs/            biblia-do-canal.md
 | 19 | Fila do Banco (T2) | Agência bancária |
 | 20 | Senha do Cartão (T2, final) | Mercado |
 | 21 | Conta de Luz (T3) | Cozinha |
+| 22 | Senha do Wi-Fi do Vizinho (T3) | Escritório |
+| 23 | A Balança (T3) | Quarto |
+| 24 | Reunião que Podia Ser um E-mail (T3) | Escritório |
+| 25 | O Último Pedaço (T3) | Cozinha |
+| 26 | Atualização do Celular (T3) | Quarto |
+| 27 | Autoatendimento (T3) | Mercado |
+| 28 | Áudio no Viva-Voz (T3) | Ônibus |
+| 29 | Seguro do Celular (T3) | Escritório |
+| 30 | Fim de Ano (T3, final) | Quarto |
 
 ## Vozes (ElevenLabs)
 As falas são geradas pela API da ElevenLabs com **tempo por caractere**, que alimenta o lip-sync e as legendas palavra a palavra.

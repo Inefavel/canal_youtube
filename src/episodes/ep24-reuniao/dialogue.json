@@ -1,0 +1,100 @@
+{
+  "episode": "ep24",
+  "title": "Reunião que Podia Ser um E-mail",
+  "tail": 3.2,
+  "music": {
+    "id": "ep24-bg",
+    "bpm": 92,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "TRÊS HORAS DE REUNIÃO?!",
+      "tts": "Três horas de reunião?!",
+      "start": 0.15
+    },
+    {
+      "id": "l2",
+      "speaker": "chefe",
+      "text": "Pauta única: a cor do botão.",
+      "gap": 0.5,
+      "offscreen": true
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Azul. Pronto. Próximo assunto.",
+      "gap": 0.3
+    },
+    {
+      "id": "l4",
+      "speaker": "chefe",
+      "text": "Calma. Vamos ouvir todo mundo.",
+      "gap": 0.4,
+      "offscreen": true
+    },
+    {
+      "id": "l5",
+      "speaker": "palito",
+      "text": "Eu acho azul-claro. Não, escuro. Não, claro!",
+      "gap": 3.0
+    },
+    {
+      "id": "l6",
+      "speaker": "chefe",
+      "text": "Ótimo. Vamos marcar outra reunião pra alinhar.",
+      "gap": 0.5,
+      "offscreen": true
+    },
+    {
+      "id": "l7",
+      "speaker": "bolota",
+      "text": "...Eu odeio reunião.",
+      "gap": 0.8
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s0",
+      "type": "alarm",
+      "at": 0.0
+    },
+    {
+      "id": "s1",
+      "type": "ding",
+      "line": "l2",
+      "edge": "start",
+      "offset": -0.3
+    },
+    {
+      "id": "s2",
+      "type": "whoosh",
+      "line": "l5",
+      "edge": "start",
+      "offset": -0.6
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "line": "l6",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s4",
+      "type": "boing",
+      "line": "l7",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s5",
+      "type": "pop",
+      "line": "l7",
+      "edge": "end",
+      "offset": 0.3
+    }
+  ]
+}

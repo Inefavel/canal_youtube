@@ -1,0 +1,104 @@
+{
+  "episode": "ep25",
+  "title": "O Último Pedaço",
+  "tail": 3.2,
+  "music": {
+    "id": "ep25-bg",
+    "bpm": 110,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "O ÚLTIMO PEDAÇO É MEU!",
+      "tts": "O último pedaço é meu!",
+      "start": 0.15
+    },
+    {
+      "id": "l2",
+      "speaker": "palito",
+      "text": "Não! É meu!",
+      "gap": 0.2
+    },
+    {
+      "id": "l3",
+      "speaker": "bolota",
+      "text": "Eu vi primeiro.",
+      "gap": 0.3
+    },
+    {
+      "id": "l4",
+      "speaker": "palito",
+      "text": "Eu pensei primeiro.",
+      "gap": 0.3
+    },
+    {
+      "id": "l5",
+      "speaker": "bolota",
+      "text": "Tá bom. Metade pra cada. Combinado?",
+      "gap": 0.8
+    },
+    {
+      "id": "l6",
+      "speaker": "palito",
+      "text": "Combinado! Ué... cadê a pizza?",
+      "gap": 0.4
+    },
+    {
+      "id": "l7",
+      "speaker": "entregador",
+      "text": "Valeu pela pizza, pessoal! Tava ótima.",
+      "gap": 0.4,
+      "offscreen": true
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio dividir.",
+      "gap": 0.8
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s0",
+      "type": "ding",
+      "at": 0.0
+    },
+    {
+      "id": "s1",
+      "type": "boing",
+      "line": "l2",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s2",
+      "type": "whoosh",
+      "line": "l6",
+      "edge": "start",
+      "offset": 0.3
+    },
+    {
+      "id": "s3",
+      "type": "boing",
+      "line": "l7",
+      "edge": "start",
+      "offset": 0.0
+    },
+    {
+      "id": "s4",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s5",
+      "type": "pop",
+      "line": "l8",
+      "edge": "end",
+      "offset": 0.3
+    }
+  ]
+}

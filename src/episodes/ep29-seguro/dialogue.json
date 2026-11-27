@@ -1,0 +1,110 @@
+{
+  "episode": "ep29",
+  "title": "Seguro do Celular",
+  "tail": 3.2,
+  "music": {
+    "id": "ep29-bg",
+    "bpm": 102,
+    "volume": 0.13
+  },
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "bolota",
+      "text": "MEU CELULAR!",
+      "tts": "Meu celular!",
+      "start": 0.15
+    },
+    {
+      "id": "l2",
+      "speaker": "bolota",
+      "text": "Peguei! Peguei no ar! Que reflexo!",
+      "gap": 0.4
+    },
+    {
+      "id": "l3",
+      "speaker": "palito",
+      "text": "Uhul! E o café?",
+      "gap": 0.3
+    },
+    {
+      "id": "l4",
+      "speaker": "bolota",
+      "text": "Que café?",
+      "gap": 0.3
+    },
+    {
+      "id": "l5",
+      "speaker": "palito",
+      "text": "Esse aí, em cima do notebook.",
+      "gap": 0.6
+    },
+    {
+      "id": "l6",
+      "speaker": "bolota",
+      "text": "Pelo menos o seguro cobre, né?",
+      "gap": 0.6
+    },
+    {
+      "id": "l7",
+      "speaker": "palito",
+      "text": "Você fez seguro só do celular.",
+      "gap": 0.4
+    },
+    {
+      "id": "l8",
+      "speaker": "bolota",
+      "text": "...Eu odeio seguro.",
+      "gap": 0.8
+    }
+  ],
+  "sfx": [
+    {
+      "id": "s0",
+      "type": "whoosh",
+      "at": 0.0
+    },
+    {
+      "id": "s1",
+      "type": "pop",
+      "line": "l2",
+      "edge": "start",
+      "offset": 0.1
+    },
+    {
+      "id": "s2",
+      "type": "boing",
+      "line": "l4",
+      "edge": "end",
+      "offset": 0.2
+    },
+    {
+      "id": "s3",
+      "type": "alarm",
+      "line": "l5",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s4",
+      "type": "boing",
+      "line": "l7",
+      "edge": "end",
+      "offset": 0.1
+    },
+    {
+      "id": "s5",
+      "type": "boing",
+      "line": "l8",
+      "edge": "start",
+      "offset": -0.5
+    },
+    {
+      "id": "s6",
+      "type": "pop",
+      "line": "l8",
+      "edge": "end",
+      "offset": 0.3
+    }
+  ]
+}

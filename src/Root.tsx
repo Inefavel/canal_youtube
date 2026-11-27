@@ -22,6 +22,15 @@ import {Episode18, TIMELINE as EP18} from './episodes/ep18-modo-aviao/Episode18'
 import {Episode19, TIMELINE as EP19} from './episodes/ep19-fila-banco/Episode19';
 import {Episode20, TIMELINE as EP20} from './episodes/ep20-senha-cartao/Episode20';
 import {Episode21, TIMELINE as EP21} from './episodes/ep21-conta-de-luz/Episode21';
+import {Episode22, TIMELINE as EP22} from './episodes/ep22-wifi-vizinho/Episode22';
+import {Episode23, TIMELINE as EP23} from './episodes/ep23-balanca/Episode23';
+import {Episode24, TIMELINE as EP24} from './episodes/ep24-reuniao/Episode24';
+import {Episode25, TIMELINE as EP25} from './episodes/ep25-ultimo-pedaco/Episode25';
+import {Episode26, TIMELINE as EP26} from './episodes/ep26-atualizacao/Episode26';
+import {Episode27, TIMELINE as EP27} from './episodes/ep27-autoatendimento/Episode27';
+import {Episode28, TIMELINE as EP28} from './episodes/ep28-viva-voz/Episode28';
+import {Episode29, TIMELINE as EP29} from './episodes/ep29-seguro/Episode29';
+import {Episode30, TIMELINE as EP30} from './episodes/ep30-fim-de-ano/Episode30';
 import {BANNER, ChannelBanner} from './branding/ChannelBanner';
 import {PROFILE, ProfilePicture} from './branding/ProfilePicture';
 import {PROMO, PromoPost} from './branding/PromoPost';
@@ -92,6 +101,24 @@ export const RemotionRoot: React.FC = () => (
     <Still id="Ep20Thumb" component={Episode20} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
     <Composition id="Ep21ContaDeLuz" component={Episode21} durationInFrames={EP21.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
     <Still id="Ep21Thumb" component={Episode21} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep22WifiVizinho" component={Episode22} durationInFrames={EP22.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep22Thumb" component={Episode22} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep23Balanca" component={Episode23} durationInFrames={EP23.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep23Thumb" component={Episode23} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep24Reuniao" component={Episode24} durationInFrames={EP24.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep24Thumb" component={Episode24} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep25UltimoPedaco" component={Episode25} durationInFrames={EP25.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep25Thumb" component={Episode25} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep26Atualizacao" component={Episode26} durationInFrames={EP26.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep26Thumb" component={Episode26} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep27Autoatendimento" component={Episode27} durationInFrames={EP27.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep27Thumb" component={Episode27} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep28VivaVoz" component={Episode28} durationInFrames={EP28.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep28Thumb" component={Episode28} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep29Seguro" component={Episode29} durationInFrames={EP29.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep29Thumb" component={Episode29} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
+    <Composition id="Ep30FimDeAno" component={Episode30} durationInFrames={EP30.durationInFrames} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+    <Still id="Ep30Thumb" component={Episode30} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
     <Still id="ProfilePicture" component={ProfilePicture} width={PROFILE.width} height={PROFILE.height} />
     <Still id="PromoPost" component={PromoPost} width={PROMO.width} height={PROMO.height} />
     <Still id="ChannelBanner" component={ChannelBanner} defaultProps={{showSafeArea: false}} width={BANNER.width} height={BANNER.height} />

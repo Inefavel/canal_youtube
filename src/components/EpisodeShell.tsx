@@ -89,6 +89,7 @@ export const SPEAKERS = {
     chefe: '#57606F',
     painel: COLORS.clockDigits,
     app: '#57606F',
+    entregador: '#57606F',
   } as Record<string, string>,
   names: {
     bolota: 'BOLOTA',
@@ -99,5 +100,6 @@ export const SPEAKERS = {
     chefe: 'CHEFE',
     painel: 'PAINEL',
     app: 'APP',
+    entregador: 'ENTREGADOR',
   } as Record<string, string>,
 };
