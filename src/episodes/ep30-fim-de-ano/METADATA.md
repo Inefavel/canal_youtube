@@ -19,7 +19,7 @@ Já é dezembro?! 📅😱 Academia, dieta, 12 livros... O Bolota cumpriu zero. 
 
 Fim da 3ª temporada! Qual foi seu episódio favorito?
 
-Quantas metas deste ano você cumpriu? Seja sincero Conta nos comentários!
+Quantas metas deste ano você cumpriu? Seja sincero! Conta nos comentários!
 
 Bolota & Palito: desenho animado sobre os pequenos dramas da vida adulta.
 
@@ -35,14 +35,14 @@ Metas do Palito: acordar, comer, dormir. ✅✅✅
 
 Fim da 3ª temporada!
 
-Quantas metas deste ano você cumpriu? Seja sincero 👇
+Quantas metas deste ano você cumpriu? Seja sincero! 👇
 
 #bolotaepalito #animação #desenhoanimado #humor #fimdeano #vidaadulta #memes #reels #humorbrasileiro
 ```
 
 ## Comentário fixado
 ```
-E você? Quantas metas deste ano você cumpriu? Seja sincero 👇
+E você? Quantas metas deste ano você cumpriu? Seja sincero! 👇
 (Os melhores comentários podem virar episódio da T4!)
 ```
 

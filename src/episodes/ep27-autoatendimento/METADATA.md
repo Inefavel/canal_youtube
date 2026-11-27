@@ -17,7 +17,7 @@ Cartão do caixa + tela piscando vermelho + alarme no frame 0 + voz da máquina 
 ```
 "Item inesperado na área de ensacamento." 🛒😤 Era uma banana. Depois era nada. E no final... era a mochila.
 
-Caixa normal ou autoatendimento? Responde aqui Conta nos comentários!
+Caixa normal ou autoatendimento? Conta nos comentários!
 
 Bolota & Palito: desenho animado sobre os pequenos dramas da vida adulta.
 
@@ -31,14 +31,14 @@ Bolota & Palito: desenho animado sobre os pequenos dramas da vida adulta.
 Era uma banana.
 Depois, era a mochila. 😤
 
-Caixa normal ou autoatendimento? Responde aqui 👇
+Caixa normal ou autoatendimento? 👇
 
 #bolotaepalito #animação #desenhoanimado #humor #autoatendimento #vidaadulta #memes #reels #humorbrasileiro
 ```
 
 ## Comentário fixado
 ```
-E você? Caixa normal ou autoatendimento? Responde aqui 👇
+E você? Caixa normal ou autoatendimento? 👇
 (Os melhores comentários podem virar episódio da T4!)
 ```
 

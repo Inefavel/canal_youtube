@@ -17,7 +17,7 @@ Cartão "WI-FI · 0 redes" no frame 0 + vibração (buzz) em 0 s + fala em 0,15 
 ```
 Sem internet! 📶😱 O Bolota tentou 30 senhas na rede do vizinho... e descobriu de quem era a rede.
 
-Você já pediu a senha do Wi-Fi do vizinho? 1 = sim, 2 = nunca Conta nos comentários!
+Você já pediu a senha do Wi-Fi do vizinho? 1 = sim, 2 = nunca. Conta nos comentários!
 
 Bolota & Palito: desenho animado sobre os pequenos dramas da vida adulta.
 
