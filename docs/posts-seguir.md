@@ -57,7 +57,7 @@ Cláusula 1: ao ler esta legenda, você aceita seguir @bolotaepalito. 📜\nClá
 
 **Comentário (postar e fixar):**
 ```
-📜 Cláusula final: quem comenta aqui ganha um episódio novo por dia no YouTube 👉 https://youtube.com/@bolotaepalito?si=EeRFL-SLy5FmF-rO
+📜 Cláusula final: quem se inscreve ganha um episódio novo por dia no YouTube 👉 https://youtube.com/@bolotaepalito?si=EeRFL-SLy5FmF-rO
 E é só seguir @bolotaepalito. Sem assinatura anual, prometemos! 😅
 ```
 
