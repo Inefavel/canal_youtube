@@ -6,7 +6,7 @@ import {COLORS, FONTS} from '../config/tokens';
 /** Post de feed do Instagram no formato retrato 4:5 (1080x1350). */
 export const PROMO = {width: 1080, height: 1350} as const;
 
-const LinkCard: React.FC<{badge: string; badgeColor: string; label: string; value: string; top: number}> = ({
+export const LinkCard: React.FC<{badge: string; badgeColor: string; label: string; value: string; top: number}> = ({
   badge,
   badgeColor,
   label,

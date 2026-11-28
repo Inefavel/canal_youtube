@@ -34,6 +34,7 @@ import {Episode30, TIMELINE as EP30} from './episodes/ep30-fim-de-ano/Episode30'
 import {BANNER, ChannelBanner} from './branding/ChannelBanner';
 import {PROFILE, ProfilePicture} from './branding/ProfilePicture';
 import {PROMO, PromoPost} from './branding/PromoPost';
+import {FOLLOW_POSTS, FollowPost} from './branding/FollowPosts';
 
 /** Registro de todos os episódios. Para um novo episódio: crie a pasta em src/episodes e adicione uma <Composition>. */
 export const RemotionRoot: React.FC = () => (
@@ -121,6 +122,9 @@ export const RemotionRoot: React.FC = () => (
     <Still id="Ep30Thumb" component={Episode30} defaultProps={{thumbnail: true}} width={VIDEO.width} height={VIDEO.height} />
     <Still id="ProfilePicture" component={ProfilePicture} width={PROFILE.width} height={PROFILE.height} />
     <Still id="PromoPost" component={PromoPost} width={PROMO.width} height={PROMO.height} />
+    {FOLLOW_POSTS.map((_, i) => (
+      <Still key={i} id={`Follow${String(i + 1).padStart(2, '0')}`} component={FollowPost} defaultProps={{index: i}} width={PROMO.width} height={PROMO.height} />
+    ))}
     <Still id="ChannelBanner" component={ChannelBanner} defaultProps={{showSafeArea: false}} width={BANNER.width} height={BANNER.height} />
   </>
 );

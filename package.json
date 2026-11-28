@@ -68,7 +68,8 @@
     "thumb:ep29": "remotion still Ep29Thumb out/ep29-thumb.png",
     "render:ep30": "npm run audio && remotion render Ep30FimDeAno out/ep30-fim-de-ano.mp4",
     "thumb:ep30": "remotion still Ep30Thumb out/ep30-thumb.png",
-    "brand": "remotion still ProfilePicture out/brand/foto-perfil.png && remotion still ChannelBanner out/brand/banner.png && remotion still PromoPost out/brand/post-divulgacao.png"
+    "brand": "remotion still ProfilePicture out/brand/foto-perfil.png && remotion still ChannelBanner out/brand/banner.png && remotion still PromoPost out/brand/post-divulgacao.png",
+    "follow": "for i in 01 02 03 04 05 06 07 08 09 10; do remotion still Follow$i out/brand/seguir-$i.png; done"
   },
   "type": "module",
   "dependencies": {
